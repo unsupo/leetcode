@@ -96,7 +96,7 @@ for content in description_data:
         desc = False
         exam = True
         if example:
-            examples.append(Example(example))
+            examples.append(Example(example[:-1]))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
