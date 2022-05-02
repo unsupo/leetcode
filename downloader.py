@@ -91,12 +91,14 @@ desc = True
 exam = False
 cons = False
 foll = False
+ab=[]
 for content in description_data:
     if '<p><strong>Example' in str(content):
         desc = False
         exam = True
         if example:
-            examples.append(Example((example + '.')[:-1]))
+            ab.append(example)
+            examples.append(Example(ab[-1]))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
