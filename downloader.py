@@ -34,11 +34,12 @@ try:
 except TimeoutException as e:
     raise e
 soup = BeautifulSoup(driver.page_source, "html.parser")
-# title = soup.select('div[data-cy="question-title"]')[0].contents[0]
+title = soup.select('div[data-cy="question-title"]')[0].contents[0]
 # description=
 # examples=
 # contraints=
 # followup=
+# dumb way to get all data, doesn't work when trying to templatize tests and such
 main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 h = markdownify.markdownify(str(main), heading_style="ATX")
 
