@@ -128,7 +128,8 @@ with open(dir_name + '/README.md', 'w') as f:
                                                                              up_votes, down_votes, description))
     f.write('\n'.join([str(i) for i in examples]) + "\n\n")
     f.write(constraints + "\n\n")
-    f.write("**Follow-up:** " + follow_up.split('**Follow-up:**')[1])
+    if follow_up:
+        f.write("**Follow-up:** " + follow_up.split('**Follow-up:**')[1])
 
 inputs = examples[0].input.get_name_values()
 testName = re.sub(r'[0-9\.]+', '', title.replace(' ', '_'))
