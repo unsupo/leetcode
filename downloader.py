@@ -39,7 +39,7 @@ class Example:
             if '**Example' in e[i]:
                 self.name = e[i]
             if '**Input:**' in e[i]:
-                self.input = Input(e[i].replace('**Input:** ', ''))
+                self.input = Input(e[i].replace('**Input:** ', '')[:])
             if '**Output:**' in e[i]:
                 self.output = e[i].replace('**Output:** ', '')
             if '**Explanation:**' in e[i]:
