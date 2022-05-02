@@ -76,5 +76,4 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write(
         '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green"),
                                                                              up_votes, down_votes, description))
-
-print(example)
+    f.write('\n'.join(examples))
