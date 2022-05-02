@@ -61,10 +61,10 @@ for content in description_data:
         cons=True
     if '<strong>Follow-up: </strong>' == str(content.text):
         foll=True
-    if desc: description+=content.text
-    if exam: example+=content.text
-    if cons: constraints+=content.text
-    if foll: follow_up+=content.text
+    if desc: description+=markdownify.markdownify(str(content), heading_style="ATX")
+    if exam: example+=markdownify.markdownify(str(content), heading_style="ATX")
+    if cons: constraints+=markdownify.markdownify(str(content), heading_style="ATX")
+    if foll: follow_up+=markdownify.markdownify(str(content), heading_style="ATX")
 
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
