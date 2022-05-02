@@ -1,5 +1,5 @@
 # 1. Two Sum
-<br/><span style="color:green">Easy</span>. 31756 1004<br/>
+<br/><span style="color:green">Easy</span>. :thumbsup:31756 :thumbsdown:1004<br/>
 ---<br/>
 Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
 
