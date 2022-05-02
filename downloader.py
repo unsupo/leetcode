@@ -70,6 +70,8 @@ for content in description_data:
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 # h = markdownify.markdownify(str(main), heading_style="ATX")
 
-with open(dir_name + '/README.md') as f:
+os.remove(dir_name + '/README.md')
+with open(dir_name + '/README.md','w') as f:
     f.write('*%s*\n%s %s %s\n---\n%s'.replace('\n','\n</br>').format(title,diff,up_votes,down_votes,description))
+
 print(example)
