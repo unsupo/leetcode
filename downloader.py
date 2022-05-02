@@ -17,6 +17,7 @@ class Example:
     name = ""
     input = ""
     output = ""
+    explanation = ""
 
     def __init__(self, example) -> None:
         e = example.split('\n')
@@ -27,9 +28,11 @@ class Example:
                 self.input = i.replace('**Input:** ', '')
             if '**Output:**' in i:
                 self.output = i.replace('**Output:** ', '')
+            if '**Explanation:**' in i:
+                self.explanation = i.replace('**Explanation:** ', '')
 
     def __str__(self) -> str:
-        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n</pre>'.format(self.name, self.input, self.output)
+        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, self.input, self.output, '<b>Output:</b> {}\n'.format(self.explanation))
 
 
 base_url = 'https://leetcode.com/problems/two-sum/'
