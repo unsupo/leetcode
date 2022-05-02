@@ -39,7 +39,7 @@ class Example:
             if '**Example' in i:
                 self.name = i
             if '**Input:**' in i:
-                self.input = Input(i.replace('**Input:** ', ''))
+                self.input = Input(i[:-1].replace('**Input:** ', ''))
             if '**Output:**' in i:
                 self.output = i.replace('**Output:** ', '')
             if '**Explanation:**' in i:
