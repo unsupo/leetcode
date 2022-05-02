@@ -18,7 +18,7 @@ class Example:
     output = ""
 
     def __init__(self, example) -> None:
-        e = example.split('/n')
+        e = example.split('\n')
         for i in e:
             if '**Example' in i:
                 self.name = i
