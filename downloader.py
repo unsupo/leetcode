@@ -97,8 +97,7 @@ for content in description_data:
         desc = False
         exam = True
         if example:
-            ab.append(example)
-            examples.append(Example(ab[-1]))
+            examples.append(Example(example))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
@@ -110,8 +109,7 @@ for content in description_data:
     if exam: example += markdownify.markdownify(str(content), heading_style="ATX")
     if cons: constraints += markdownify.markdownify(str(content), heading_style="ATX")
     if foll: follow_up += markdownify.markdownify(str(content), heading_style="ATX")
-ab.append(example)
-examples.append(Example(ab[-1]))
+examples.append(Example(example))
 
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
