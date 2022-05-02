@@ -42,4 +42,5 @@ soup = BeautifulSoup(driver.page_source, "html.parser")
 main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 h = markdownify.markdownify(str(main), heading_style="ATX")
 
-print(soup)
+with open(dir_name+'/README.md') as f:
+    f.write(h)
