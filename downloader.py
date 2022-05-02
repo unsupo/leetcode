@@ -17,7 +17,11 @@ except FileExistsError:
     pass
 
 soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
-
+title=
+description=
+examples=
+contraints=
+followup=
 
 h = markdownify.markdownify(soup, heading_style="ATX")
 
