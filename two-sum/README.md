@@ -1,4 +1,4 @@
-*1. Two Sum*
+# 1. Two Sum
 <br/>Easy 31756 1004<br/>
 ---<br/>
 Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
