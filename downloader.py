@@ -105,6 +105,9 @@ with open(dir_name + '/README.md', 'w') as f:
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):
-    def {}(self,
-        '''
+    def {}(self, {}):
+        """
+        {}
+        """
+        '''.format(title.replace())
     )
