@@ -118,7 +118,10 @@ examples.append(Example(example))
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 # h = markdownify.markdownify(str(main), heading_style="ATX")
 color = "<span style=\"color:{color}\">{}</span>."
-os.remove(dir_name + '/README.md')
+try:
+    os.remove(dir_name + '/README.md')
+except FileNotFoundError:
+    pass
 with open(dir_name + '/README.md', 'w') as f:
     f.write(
         '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green"),
