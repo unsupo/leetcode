@@ -98,4 +98,4 @@ with open(dir_name + '/README.md', 'w') as f:
                                                                              up_votes, down_votes, description))
     f.write('\n'.join([str(i) for i in examples]))
     f.write(constraints)
-    f.write(follow_up)
+    f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
