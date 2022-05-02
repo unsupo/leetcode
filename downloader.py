@@ -41,7 +41,10 @@ diff=metadata[0].text
 up_votes=metadata[1].text
 down_votes=metadata[2].text
 description_data=soup.select('div[data-cy="question-title"]')[0].parent.parent.contents[1].contents[0].contents
-description=description_data[1]
+description=""
+for content in description_data:
+    if '<p><strong>Example' in content.text:
+
 # examples=
 # contraints=
 # followup=
