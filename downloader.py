@@ -57,9 +57,9 @@ for content in description_data:
         if example:
             examples.append(example)
             example = ""
-    if '<p><strong>Constraints:</strong></p>' == str(content.text):
+    if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
-    if '<strong>Follow-up: </strong>' == str(content.text):
+    if '<strong>Follow-up: </strong>' == str(content):
         foll = True
     if desc: description += markdownify.markdownify(str(content), heading_style="ATX")
     if exam: example += markdownify.markdownify(str(content), heading_style="ATX")
@@ -77,3 +77,5 @@ with open(dir_name + '/README.md', 'w') as f:
         '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green"),
                                                                              up_votes, down_votes, description))
     f.write('\n'.join(examples))
+    f.write(constraints)
+    f.write(follow_up)
