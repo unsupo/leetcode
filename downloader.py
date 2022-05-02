@@ -134,7 +134,7 @@ with open(dir_name + '/solution.py', 'w') as f:
     for example in examples:
         f.write(
             '''def test{}:
-    assert Solution().{}({}) 
+    assert Solution().{}({}) == {}
             '''.format(i)
         )
         i+=1
