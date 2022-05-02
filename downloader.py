@@ -69,9 +69,9 @@ for content in description_data:
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 # h = markdownify.markdownify(str(main), heading_style="ATX")
-
+color="<span style=\"color:{color}\">{}</span>."
 os.remove(dir_name + '/README.md')
 with open(dir_name + '/README.md', 'w') as f:
-    f.write('# {}\n<br/>{} {} {}<br/>\n---<br/>\n{}'.format(title, diff, up_votes, down_votes, description))
+    f.write('# {}\n<br/>{} {} {}<br/>\n---<br/>\n{}'.format(title, color.format(diff,color="green"), up_votes, down_votes, description))
 
 print(example)
