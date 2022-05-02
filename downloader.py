@@ -11,6 +11,26 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
+class Example:
+    name = ""
+    input = ""
+    output = ""
+
+    def __init__(self, example) -> None:
+        e = example.split('/n')
+        for i in e:
+            if '**Example' in i:
+                self.name = i
+            if '**Input:**' in i:
+                self.input = i.replace('**Input:** ', '')
+            if '**Output:**' in i:
+                self.output = i.replace('**Output:** ', '')
+
+    def __str__(self) -> str:
+        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}'.format(self.name,self.input,self.output)
+
+
 base_url = 'https://leetcode.com/problems/two-sum/'
 # make directory for new problem
 dir_name = base_url.split('/')
@@ -55,7 +75,7 @@ for content in description_data:
         desc = False
         exam = True
         if example:
-            examples.append(example)
+            examples.append(Example(example))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
@@ -65,7 +85,7 @@ for content in description_data:
     if exam: example += markdownify.markdownify(str(content), heading_style="ATX")
     if cons: constraints += markdownify.markdownify(str(content), heading_style="ATX")
     if foll: follow_up += markdownify.markdownify(str(content), heading_style="ATX")
-examples.append(example)
+examples.append(Example(example))
 
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
