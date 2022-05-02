@@ -31,6 +31,7 @@ try:
 except TimeoutException as e:
     raise e
 soup = BeautifulSoup(driver.page_source, "html.parser")
+title = soup.select('div[data-cy="question-title"]')
 # title=
 # description=
 # examples=
