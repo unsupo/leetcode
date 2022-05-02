@@ -17,7 +17,7 @@ class Input:
     s = ""
 
     def __init__(self, input) -> None:
-        s = ""
+        self.s = ""
         inp = input.split(', ')
         for i in inp:
             r = i.split(' = ')
