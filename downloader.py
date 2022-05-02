@@ -72,6 +72,6 @@ for content in description_data:
 color="<span style=\"color:{color}\">{}</span>."
 os.remove(dir_name + '/README.md')
 with open(dir_name + '/README.md', 'w') as f:
-    f.write('# {}\n<br/>{} {} {}<br/>\n---<br/>\n{}'.format(title, color.format(diff,color="green"), up_votes, down_votes, description))
+    f.write('# {}\n<br/>{} :thumbsup:{} :thumbsdown:{}<br/>\n---<br/>\n{}'.format(title, color.format(diff,color="green"), up_votes, down_votes, description))
 
 print(example)
