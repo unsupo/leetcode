@@ -42,18 +42,33 @@ up_votes=metadata[1].text
 down_votes=metadata[2].text
 description_data=soup.select('div[data-cy="question-title"]')[0].parent.parent.contents[1].contents[0].contents
 description=""
+examples=[]
+example=""
+constraints=""
+follow_up=""
 desc = True
+exam = False
+cons = False
+foll = False
 for content in description_data:
     if '<p><strong>Example' in content.text:
         desc=False
+        exam=True
+        if example:
+            examples.append(example)
+            example=""
+    if '<p><strong>Constraints:</strong></p>' == content.text:
+        cons=True
+    if '<strong>Follow-up: </strong>' == content.text:
+        foll=True
     if desc: description+=content.text
+    if exam: example+=content.text
+    if cons: constraints+=content.text
+    if foll: follow_up+=content.text
 
-# examples=
-# contraints=
-# followup=
 # dumb way to get all data, doesn't work when trying to templatize tests and such
-main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
-h = markdownify.markdownify(str(main), heading_style="ATX")
+# main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
+# h = markdownify.markdownify(str(main), heading_style="ATX")
 
 with open(dir_name + '/README.md') as f:
     f.write(h)
