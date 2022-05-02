@@ -72,6 +72,6 @@ for content in description_data:
 
 os.remove(dir_name + '/README.md')
 with open(dir_name + '/README.md','w') as f:
-    f.write('*%s*\n%s %s %s\n---\n%s'.replace('\n','\n</br>').format(title,diff,up_votes,down_votes,description))
+    f.write('*{}*\n{} {} {}\n---\n{}'.replace('\n','\n</br>').format(title,diff,up_votes,down_votes,description))
 
 print(example)
