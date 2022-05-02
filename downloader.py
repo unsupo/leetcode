@@ -35,6 +35,8 @@ except TimeoutException as e:
     raise e
 soup = BeautifulSoup(driver.page_source, "html.parser")
 title = soup.select('div[data-cy="question-title"]')[0].contents[0]
+for child in soup.select('div[data-cy="question-title"]')[0].parent.children:
+    print(child)
 # metadata =
 # description=
 # examples=
