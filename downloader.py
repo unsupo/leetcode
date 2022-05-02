@@ -39,7 +39,7 @@ class Example:
             if '**Example' in i:
                 self.name = i
             if '**Input:**' in i:
-                self.input = Input(('%s' % i).replace('**Input:** ', ''))
+                self.input = Input((i + '.')[:-1].replace('**Input:** ', ''))
             if '**Output:**' in i:
                 self.output = i.replace('**Output:** ', '')
             if '**Explanation:**' in i:
@@ -96,7 +96,7 @@ for content in description_data:
         desc = False
         exam = True
         if example:
-            examples.append(Example('%s' % example))
+            examples.append(Example((example + '.')[:-1]))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
