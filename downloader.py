@@ -51,15 +51,15 @@ exam = False
 cons = False
 foll = False
 for content in description_data:
-    if '<p><strong>Example' in content.text:
+    if '<p><strong>Example' in str(content):
         desc=False
         exam=True
         if example:
             examples.append(example)
             example=""
-    if '<p><strong>Constraints:</strong></p>' == content.text:
+    if '<p><strong>Constraints:</strong></p>' == str(content.text):
         cons=True
-    if '<strong>Follow-up: </strong>' == content.text:
+    if '<strong>Follow-up: </strong>' == str(content.text):
         foll=True
     if desc: description+=content.text
     if exam: example+=content.text
