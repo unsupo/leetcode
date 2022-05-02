@@ -17,4 +17,7 @@ class Solution(object):
             def test2():
     assert Solution()._Two_Sum([3,3], 6) == [0,1]
 
-            
+            if name == '__main__':
+	test0()
+	test1()
+	test2()
