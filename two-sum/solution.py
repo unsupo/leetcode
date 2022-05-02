@@ -10,8 +10,6 @@ class Solution(object):
                 if i == j: continue
                 if nums[i] + nums[j] == target:
                     return [i, j]
-        # Have solution here and remove pass
-        pass
 
 
 def test0():
