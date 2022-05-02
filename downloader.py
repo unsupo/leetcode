@@ -36,7 +36,8 @@ except TimeoutException as e:
 soup = BeautifulSoup(driver.page_source, "html.parser")
 driver.close()
 title = soup.select('div[data-cy="question-title"]')[0].contents[0]
-metadata = soup.select('div[data-cy="question-title"]')[0].parent.contents[1]
+metadata = soup.select('div[data-cy="question-title"]')[0].parent.contents[1].contents
+diff=metadata[0].text
 # metadata =
 # description=
 # examples=
