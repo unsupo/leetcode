@@ -70,5 +70,6 @@ for content in description_data:
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 # h = markdownify.markdownify(str(main), heading_style="ATX")
 
-with open(dir_name + '/README.md') as f:
-    f.write(h)
+# with open(dir_name + '/README.md') as f:
+#     f.write(h)
+print(example)
