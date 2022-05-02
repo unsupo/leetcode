@@ -11,11 +11,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 base_url = 'https://leetcode.com/problems/two-sum/'
 # make directory for new problem
 dir_name = base_url.split('/')
-if dir_name[-1].replace('/',''):
+if dir_name[-1].replace('/', ''):
     dir_name = dir_name[-1]
 else:
     dir_name = dir_name[-2]
@@ -26,11 +25,12 @@ except FileExistsError:
 
 options = Options()
 options.headless = True
-driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 driver.get(base_url)
-delay=30
+delay = 30
 try:
-    myElem = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div[data-cy="question-title"]')))
+    myElem = WebDriverWait(driver, delay).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, 'div[data-cy="question-title"]')))
 except TimeoutException as e:
     raise e
 soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -44,5 +44,5 @@ title = soup.select('div[data-cy="question-title"]')[0].contents[0]
 main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
 h = markdownify.markdownify(str(main), heading_style="ATX")
 
-with open(dir_name+'/README.md') as f:
+with open(dir_name + '/README.md') as f:
     f.write(h)
