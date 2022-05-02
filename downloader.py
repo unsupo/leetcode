@@ -3,6 +3,8 @@ import os
 import markdownify
 import requests
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 base_url = 'https://leetcode.com/problems/two-sum/'
 # make directory for new problem
