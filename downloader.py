@@ -46,7 +46,7 @@ desc = True
 for content in description_data:
     if '<p><strong>Example' in content.text:
         desc=False
-    if desc: description+
+    if desc: description+=content.text
 
 # examples=
 # contraints=
