@@ -12,6 +12,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+class Input:
+    name_values = {}
+    s  = ""
+
+    def __init__(self, input) -> None:
+        s = ""
+        inp = input.split(', ')
+        for i in inp:
+            r = i.split(' = ')
+            self.name_values[r[0]]=r[1]
+
+    def __str__(self) -> str:
+        return self.s
+
 
 class Example:
     name = ""
@@ -25,14 +39,14 @@ class Example:
             if '**Example' in i:
                 self.name = i
             if '**Input:**' in i:
-                self.input = i.replace('**Input:** ', '')
+                self.input = Input(i.replace('**Input:** ', ''))
             if '**Output:**' in i:
                 self.output = i.replace('**Output:** ', '')
             if '**Explanation:**' in i:
                 self.explanation = i.replace('**Explanation:** ', '')
 
     def __str__(self) -> str:
-        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, self.input, self.output, '<b>Output:</b> {}\n'.format(self.explanation))
+        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, str(self.input), self.output, '<b>Output:</b> {}\n'.format(self.explanation))
 
 
 base_url = 'https://leetcode.com/problems/two-sum/'
@@ -106,6 +120,7 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write(constraints+"\n\n")
     f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
 
+input_names = examples[0].input.name_values.keys()
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):
@@ -113,5 +128,5 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'))
+        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(input_names),)
     )
