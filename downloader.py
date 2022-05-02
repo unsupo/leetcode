@@ -40,7 +40,7 @@ metadata = soup.select('div[data-cy="question-title"]')[0].parent.contents[1].co
 diff=metadata[0].text
 up_votes=metadata[1].text
 down_votes=metadata[2].text
-description_data=soup.select('div[data-cy="question-title"]')[0].parent.parent
+description_data=soup.select('div[data-cy="question-title"]')[0].parent.parent.contents[1].contents[0].contents
 description=description_data[1]
 # examples=
 # contraints=
