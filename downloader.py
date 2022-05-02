@@ -30,7 +30,7 @@ try:
     myElem = WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div[data-cy="question-title"]')))
 except TimeoutException as e:
     raise e
-soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
+soup = BeautifulSoup(driver.page_source, "html.parser")
 # title=
 # description=
 # examples=
