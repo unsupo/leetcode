@@ -133,6 +133,7 @@ with open(dir_name + '/solution.py', 'w') as f:
         {}
         :rtype: {}
         """
+        # Have solution here
         pass
 
         '''.format(testName, ', '.join(inputs.keys()),
