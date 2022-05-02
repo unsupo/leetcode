@@ -27,7 +27,7 @@ class Input:
         for i in inp:
             r = i.split(' = ')
             self.name_values[r[0]] = r[1]
-
+        return self.name_values
 
 
 class Example:
