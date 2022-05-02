@@ -148,4 +148,4 @@ with open(dir_name + '/solution.py', 'w') as f:
             '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
         )
         i += 1
-    f.write("\nif __name__ == '__main__':\n   {}".format('\n   '.join(['test'+str(j)+'()' for j in range(i)])))
+    f.write("\nif __name__ == '__main__':\n    {}".format('\n    '.join(['test'+str(j)+'()' for j in range(i)])))
