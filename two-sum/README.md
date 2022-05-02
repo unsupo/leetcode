@@ -1,4 +1,7 @@
-[Description](/problems/two-sum/)[Solution](/problems/two-sum/solution/)[Discuss](/problems/two-sum/discuss/)[Submissions](/problems/two-sum/submissions/)1. Two SumEasy317531004Add to ListShareGiven an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
+*%s*
+</br>%s %s %s
+</br>---
+</br>%solution](/problems/two-sum/solution/)[Discuss](/problems/two-sum/discuss/)[Submissions](/problems/two-sum/submissions/)1. Two SumEasy317531004Add to ListShareGiven an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
 
 
 You may assume that each input would have ***exactly* one solution**, and you may not use the *same* element twice.
