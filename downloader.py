@@ -28,7 +28,7 @@ class Example:
                 self.output = i.replace('**Output:** ', '')
 
     def __str__(self) -> str:
-        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}'.format(self.name, self.input, self.output)
+        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}</pre>'.format(self.name, self.input, self.output)
 
 
 base_url = 'https://leetcode.com/problems/two-sum/'
