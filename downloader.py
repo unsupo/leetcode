@@ -14,14 +14,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class Input:
     name_values = {}
-    s  = ""
+    s = ""
 
     def __init__(self, input) -> None:
         s = ""
         inp = input.split(', ')
         for i in inp:
             r = i.split(' = ')
-            self.name_values[r[0]]=r[1]
+            self.name_values[r[0]] = r[1]
 
     def __str__(self) -> str:
         return self.s
@@ -46,7 +46,10 @@ class Example:
                 self.explanation = i.replace('**Explanation:** ', '')
 
     def __str__(self) -> str:
-        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, str(self.input), self.output, '<b>Output:</b> {}\n'.format(self.explanation))
+        return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, str(self.input),
+                                                                                         self.output,
+                                                                                         '<b>Output:</b> {}\n'.format(
+                                                                                             self.explanation))
 
 
 base_url = 'https://leetcode.com/problems/two-sum/'
@@ -97,7 +100,7 @@ for content in description_data:
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
-        exam=False
+        exam = False
     if '<strong>Follow-up:' in str(content):
         foll = True
         cons = False
@@ -116,26 +119,31 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write(
         '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green"),
                                                                              up_votes, down_votes, description))
-    f.write('\n'.join([str(i) for i in examples])+"\n\n")
-    f.write(constraints+"\n\n")
-    f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
+    f.write('\n'.join([str(i) for i in examples]) + "\n\n")
+    f.write(constraints + "\n\n")
+    f.write("**Follow-up:** " + follow_up.split('**Follow-up:**')[1])
 
 inputs = examples[0].input.name_values
-testName = re.sub(r'[0-9]+','',title.replace(' ','_'))
+testName = re.sub(r'[0-9\.]+', '', title.replace(' ', '_'))
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):
     def {}(self, {}):
         """
         {}
+        :rtype: {}
         """
-        '''.format(testName, ','.join(inputs.keys()),'\n:type '.join([i+': '+inputs[i] for i in inputs.keys()]))
+        pass
+
+        '''.format(testName, ','.join(inputs.keys()), '\t\t\n'.join([':type '+i + ': ' + inputs[i] for i in inputs.keys()]), examples[0].output)
     )
-    i=0
+    i = 0
     for example in examples:
         f.write(
-            '''def test{}:
+            '''def test{}():
     assert Solution().{}({}) == {}
+
             '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
         )
-        i+=1
+        i += 1
+    f.write("if name == '__main__':\n\t{}".format('\n\t'.join(['test'+j+'()' for j in range(i)])))
