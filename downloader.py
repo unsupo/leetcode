@@ -19,6 +19,7 @@ except FileExistsError:
     pass
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
+driver.get(base_url)
 
 soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
 # title=
