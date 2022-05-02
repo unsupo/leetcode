@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-soup = BeautifulSoup(requests.get("https://e-com.secure.force.com/adidasUSContact/").content, "html.parser")
-
-key = soup.select_one("#ncaptchaRecaptchaId")["data-sitekey"]
+base_url = 'https://leetcode.com/problems/'
+problem = 'two-sum/'
+soup = BeautifulSoup(requests.get(base_url+problem).content, "html.parser")
+print(soup)
+# key = soup.select_one("#ncaptchaRecaptchaId")["data-sitekey"]
