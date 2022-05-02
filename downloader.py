@@ -2,15 +2,15 @@ import os
 import re
 
 import markdownify
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 class Input:
     name_values = {}
@@ -121,6 +121,7 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
 
 inputs = examples[0].input.name_values
+testName = re.sub(r'[0-9]+','',title.replace(' ','_'))
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):
@@ -128,13 +129,13 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(inputs.keys())),'\n:type '.join([i+': '+inputs[i] for i in inputs.keys()]))
+        '''.format(testName, ','.join(inputs.keys()),'\n:type '.join([i+': '+inputs[i] for i in inputs.keys()]))
     )
     i=0
     for example in examples:
         f.write(
             '''def test{}:
     assert Solution().{}({}) == {}
-            '''.format(i)
+            '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
         )
         i+=1

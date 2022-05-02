@@ -19,22 +19,25 @@ You can return the answer in any order.
 
 
 <pre>
-<b>Input:</b> nums = [2,7,11,15], target = 9
+<b>Input:</b> 
 <b>Output:</b> [0,1]
+<b>Output:</b> Because nums[0] + nums[1] == 9, we return [0, 1].
 </pre>
 ****Example 2:****
 
 
 <pre>
-<b>Input:</b> nums = [3,2,4], target = 6
+<b>Input:</b> 
 <b>Output:</b> [1,2]
+<b>Output:</b> 
 </pre>
 ****Example 3:****
 
 
 <pre>
-<b>Input:</b> nums = [3,3], target = 6
+<b>Input:</b> 
 <b>Output:</b> [0,1]
+<b>Output:</b> 
 </pre>
 
 **Constraints:**
