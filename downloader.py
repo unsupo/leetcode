@@ -55,7 +55,7 @@ class Example:
                                                                                              self.explanation))
 
 
-base_url = 'https://leetcode.com/problems/two-sum/'
+base_url = 'https://leetcode.com/problems/add-two-numbers/'
 # make directory for new problem
 dir_name = base_url.split('/')
 if dir_name[-1].replace('/', ''):
