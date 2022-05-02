@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -23,7 +24,9 @@ try:
 except FileExistsError:
     pass
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+options = Options()
+options.headless = True
+driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
 driver.get(base_url)
 delay=3
 try:
