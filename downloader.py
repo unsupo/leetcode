@@ -128,5 +128,10 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(inputs.keys())),'\n:type '.join([i+': '+ for i in inputs.keys()]))
+        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(inputs.keys())),'\n:type '.join([i+': '+inputs[i] for i in inputs.keys()]))
+    )
+    f.write(
+        '''def test
+        
+        '''
     )
