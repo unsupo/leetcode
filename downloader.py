@@ -18,13 +18,16 @@ class Input:
 
     def __init__(self, input) -> None:
         self.s = input
+
+    def __str__(self) -> str:
+        return self.s
+
+    def get_name_values(self):
         inp = self.s.split(', ')
         for i in inp:
             r = i.split(' = ')
             self.name_values[r[0]] = r[1]
 
-    def __str__(self) -> str:
-        return self.s
 
 
 class Example:
@@ -146,7 +149,7 @@ with open(dir_name + '/solution.py', 'w') as f:
         f.write('''\ndef test{}():
     assert Solution().{}({}) == {}
 
-            '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
+            '''.format(i, testName, ', '.join(example.input.get_name_values().values()), example.output)
         )
         i += 1
     f.write("\nif __name__ == '__main__':\n    {}".format('\n    '.join(['test'+str(j)+'()' for j in range(i)])))
