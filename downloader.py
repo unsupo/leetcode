@@ -135,7 +135,9 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         pass
 
-        '''.format(testName, ','.join(inputs.keys()), '\t\t\n'.join([':type '+i + ': ' + inputs[i] for i in inputs.keys()]), examples[0].output)
+        '''.format(testName, ', '.join(inputs.keys()),
+                   '\n        '.join([':type '+i + ': ' + inputs[i] for i in inputs.keys()]),
+                   examples[0].output)
     )
     i = 0
     for example in examples:
