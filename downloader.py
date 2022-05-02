@@ -101,3 +101,10 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write('\n'.join([str(i) for i in examples])+"\n\n")
     f.write(constraints+"\n\n")
     f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
+
+with open(dir_name + '/solution.py', 'w') as f:
+    f.write(
+        '''class Solution(object):
+    def {}(self,
+        '''
+    )
