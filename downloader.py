@@ -128,5 +128,5 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(input_names),)
+        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(input_names),'\n:type ')
     )
