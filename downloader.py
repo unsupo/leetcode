@@ -1,5 +1,6 @@
 import os
 
+import markdownify
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,10 +11,12 @@ if dir_name[-1].replace('/',''):
     dir_name = dir_name[-1]
 else:
     dir_name = dir_name[-2]
-os.mkdir(dir_name)
-
+try:
+    os.mkdir(dir_name)
+except FileExistsError:
+    pass
 
 soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
-h = markdownify.markdownify(html, heading_style="ATX")
+h = markdownify.markdownify(soup, heading_style="ATX")
 
 print(soup)
