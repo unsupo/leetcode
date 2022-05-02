@@ -14,4 +14,6 @@ os.mkdir(dir_name)
 
 
 soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
+h = markdownify.markdownify(html, heading_style="ATX")
+
 print(soup)
