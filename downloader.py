@@ -120,7 +120,7 @@ with open(dir_name + '/README.md', 'w') as f:
     f.write(constraints+"\n\n")
     f.write("**Follow-up:** "+follow_up.split('**Follow-up:**')[1])
 
-input_names = examples[0].input.name_values.keys()
+inputs = examples[0].input.name_values
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):
@@ -128,5 +128,5 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(input_names),'\n:type ')
+        '''.format(re.sub(r'[0-9]+','',title.replace(' ','_'), ','.join(inputs.keys())),'\n:type '.join([i+': '+ for i in inputs.keys()]))
     )
