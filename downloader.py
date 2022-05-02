@@ -65,6 +65,7 @@ for content in description_data:
     if exam: example += markdownify.markdownify(str(content), heading_style="ATX")
     if cons: constraints += markdownify.markdownify(str(content), heading_style="ATX")
     if foll: follow_up += markdownify.markdownify(str(content), heading_style="ATX")
+examples.append(example)
 
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
@@ -72,6 +73,6 @@ for content in description_data:
 color="<span style=\"color:{color}\">{}</span>."
 os.remove(dir_name + '/README.md')
 with open(dir_name + '/README.md', 'w') as f:
-    f.write('# {}\n<br/>{} :thumbsup:{} :thumbsdown:{}<br/>\n---<br/>\n{}'.format(title, color.format(diff,color="green"), up_votes, down_votes, description))
+    f.write('# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff,color="green"), up_votes, down_votes, description))
 
 print(example)
