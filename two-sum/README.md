@@ -20,19 +20,24 @@ You can return the answer in any order.
 
 <pre>
 <b>Input:</b> nums = [2,7,11,15], target = 9
-<b>Output:</b> [0,1]</pre>
+<b>Output:</b> [0,1]
+</pre>
 ****Example 2:****
 
 
 <pre>
 <b>Input:</b> nums = [3,2,4], target = 6
-<b>Output:</b> [1,2]</pre>
+<b>Output:</b> [1,2]
+</pre>
 ****Example 3:****
 
 
 <pre>
 <b>Input:</b> nums = [3,3], target = 6
-<b>Output:</b> [0,1]</pre>**Constraints:**
+<b>Output:</b> [0,1]
+</pre>
+
+**Constraints:**
 
 
 * `2 <= nums.length <= 104`
@@ -43,4 +48,6 @@ You can return the answer in any order.
  
 
 
-**Follow-up:**Can you come up with an algorithm that is less than `O(n2)`time complexity?**Follow-up:** Can you come up with an algorithm that is less than `O(n2)`time complexity?
+
+
+**Follow-up:** Can you come up with an algorithm that is less than `O(n2)`time complexity?
