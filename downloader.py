@@ -142,8 +142,7 @@ with open(dir_name + '/solution.py', 'w') as f:
     )
     i = 0
     for example in examples:
-        f.write(
-            '''def test{}():
+        f.write('''def test{}():
     assert Solution().{}({}) == {}
 
             '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
