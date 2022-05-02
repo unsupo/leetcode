@@ -142,10 +142,10 @@ with open(dir_name + '/solution.py', 'w') as f:
     )
     i = 0
     for example in examples:
-        f.write('''def test{}():
+        f.write('''\ndef test{}():
     assert Solution().{}({}) == {}
 
             '''.format(i, testName, ', '.join(example.input.name_values.values()), example.output)
         )
         i += 1
-    f.write("if name == '__main__':\n   {}".format('\n   '.join(['test'+str(j)+'()' for j in range(i)])))
+    f.write("\nif __name__ == '__main__':\n   {}".format('\n   '.join(['test'+str(j)+'()' for j in range(i)])))
