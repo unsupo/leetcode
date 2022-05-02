@@ -35,15 +35,15 @@ class Example:
 
     def __init__(self, example) -> None:
         e = example.split('\n')
-        for i in e:
-            if '**Example' in i:
-                self.name = i
-            if '**Input:**' in i:
-                self.input = Input((i + '.')[:-1].replace('**Input:** ', ''))
-            if '**Output:**' in i:
-                self.output = i.replace('**Output:** ', '')
-            if '**Explanation:**' in i:
-                self.explanation = i.replace('**Explanation:** ', '')
+        for i in range(len(e)):
+            if '**Example' in e[i]:
+                self.name = e[i]
+            if '**Input:**' in e[i]:
+                self.input = Input(e[i].replace('**Input:** ', ''))
+            if '**Output:**' in e[i]:
+                self.output = e[i].replace('**Output:** ', '')
+            if '**Explanation:**' in e[i]:
+                self.explanation = e[i].replace('**Explanation:** ', '')
 
     def __str__(self) -> str:
         return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, str(self.input),
