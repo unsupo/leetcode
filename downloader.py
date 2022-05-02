@@ -39,7 +39,7 @@ class Example:
             if '**Example' in i:
                 self.name = i
             if '**Input:**' in i:
-                self.input = Input(i[:-1].replace('**Input:** ', ''))
+                self.input = Input(i[:].replace('**Input:** ', ''))
             if '**Output:**' in i:
                 self.output = i.replace('**Output:** ', '')
             if '**Explanation:**' in i:
@@ -96,7 +96,7 @@ for content in description_data:
         desc = False
         exam = True
         if example:
-            examples.append(Example(example[:-1]))
+            examples.append(Example(example[:]))
             example = ""
     if '<p><strong>Constraints:</strong></p>' == str(content):
         cons = True
@@ -108,7 +108,7 @@ for content in description_data:
     if exam: example += markdownify.markdownify(str(content), heading_style="ATX")
     if cons: constraints += markdownify.markdownify(str(content), heading_style="ATX")
     if foll: follow_up += markdownify.markdownify(str(content), heading_style="ATX")
-examples.append(Example(example[:-1]))
+examples.append(Example(example[:]))
 
 # dumb way to get all data, doesn't work when trying to templatize tests and such
 # main = soup.select('div[data-cy="question-detail-main-tabs"]')[0]
