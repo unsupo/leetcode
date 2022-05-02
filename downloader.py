@@ -51,8 +51,8 @@ class Example:
     def __str__(self) -> str:
         return '**{}**\n\n\n<pre>\n<b>Input:</b> {}\n<b>Output:</b> {}\n{}</pre>'.format(self.name, str(self.input),
                                                                                          self.output,
-                                                                                         '<b>Output:</b> {}\n'.format(
-                                                                                             self.explanation))
+                                                                                         '<b>Explanation:</b> {}\n'.format(
+                                                                                             self.explanation) if self.explanation else '')
 
 
 base_url = 'https://leetcode.com/problems/add-two-numbers/'

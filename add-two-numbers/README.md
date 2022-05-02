@@ -18,7 +18,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 <pre>
 <b>Input:</b> l1 = [2,4,3], l2 = [5,6,4]
 <b>Output:</b> [7,0,8]
-<b>Output:</b> 342 + 465 = 807.
+<b>Explanation:</b> 342 + 465 = 807.
 </pre>
 ****Example 2:****
 
@@ -26,7 +26,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 <pre>
 <b>Input:</b> l1 = [0], l2 = [0]
 <b>Output:</b> [0]
-<b>Output:</b> 
 </pre>
 ****Example 3:****
 
@@ -34,7 +33,6 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 <pre>
 <b>Input:</b> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 <b>Output:</b> [8,9,9,9,0,0,0,1]
-<b>Output:</b> 
 </pre>
 
 **Constraints:**
