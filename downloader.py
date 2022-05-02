@@ -1,4 +1,5 @@
 import os
+import re
 
 import markdownify
 import requests
@@ -109,5 +110,5 @@ with open(dir_name + '/solution.py', 'w') as f:
         """
         {}
         """
-        '''.format(title.replace())
+        '''.format(re.(title.replace())
     )
