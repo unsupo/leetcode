@@ -17,6 +17,8 @@ except FileExistsError:
     pass
 
 soup = BeautifulSoup(requests.get(base_url).content, "html.parser")
+
+
 h = markdownify.markdownify(soup, heading_style="ATX")
 
 print(soup)
