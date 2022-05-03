@@ -4,6 +4,9 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
+                
+
+    def attempt1(self): # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
             return s
         l = len(s)
