@@ -19,7 +19,8 @@ class Solution(object):
                 v = l1[i] + l2[i]
             if r > 0:
                 v += r
-                r = 0
+                if v < 10:
+                    r = 0
             if v // 10 >= 1:
                 r = v // 10
                 v = v % 10
