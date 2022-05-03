@@ -188,4 +188,17 @@ func:'test8' args:[(), {}] took: 0.0000 sec
 func:'test9' args:[(), {}] took: 0.0242 sec
 func:'test10' args:[(), {}] took: 0.1699 sec
 func:'run_tests' args:[(), {}] took: 0.6568 sec
+
+func:'test0' args:[(), {}] took: 0.0000 sec
+func:'test1' args:[(), {}] took: 0.0000 sec
+func:'test2' args:[(), {}] took: 0.0000 sec
+func:'test3' args:[(), {}] took: 0.0000 sec
+func:'test4' args:[(), {}] took: 0.2139 sec
+func:'test5' args:[(), {}] took: 0.0675 sec
+func:'test6' args:[(), {}] took: 0.2537 sec
+func:'test7' args:[(), {}] took: 0.0053 sec
+func:'test8' args:[(), {}] took: 0.0000 sec
+func:'test9' args:[(), {}] took: 0.0334 sec
+func:'test10' args:[(), {}] took: 0.1745 sec
+func:'run_tests' args:[(), {}] took: 0.7485 sec
 """
