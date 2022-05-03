@@ -81,7 +81,6 @@ class Solution(object):
         l4 = ListNode(v, l4)
         return l2, l3, l4, r
 
-
     # Function to reverse the linked list
     def reverse(self, node):
         l = []
@@ -91,22 +90,25 @@ class Solution(object):
         l.append(node.val)
         n = None
         for i in l:
-            n = ListNode(i,n)
+            n = ListNode(i, n)
         return n
+
 
 def test0():
     assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
-                                       ListNode.to_list_node([5, 6, 4])), ListNode.to_list_node([7, 0, 8]))
+                                                       ListNode.to_list_node([5, 6, 4])),
+                           ListNode.to_list_node([7, 0, 8]))
 
 
 def test1():
-    assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([0]), ListNode.to_list_node([0])), ListNode.to_list_node(
-        [0]))
+    assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([0]), ListNode.to_list_node([0])),
+                           ListNode.to_list_node(
+                               [0]))
 
 
 def test2():
     assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([9, 9, 9, 9, 9, 9, 9]),
-                                       ListNode.to_list_node([9, 9, 9, 9])), ListNode.to_list_node(
+                                                       ListNode.to_list_node([9, 9, 9, 9])), ListNode.to_list_node(
         [8, 9, 9, 9, 0, 0, 0, 1]))
 
 
