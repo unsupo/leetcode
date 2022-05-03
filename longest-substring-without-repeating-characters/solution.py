@@ -14,7 +14,7 @@ class Solution(object):
                 if i in j:
                     done.append(j)
                     seen.remove(j)
-            s.add(i)
+                j.add(i)
         done.extend(seen)
         for i in done:
             if len(i) > longest:
