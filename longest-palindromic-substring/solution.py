@@ -3,7 +3,14 @@ from memory_profiler import profile
 from functools import wraps
 from time import time
 
+"""
+babad
 
+baba
+abab
+
+
+"""
 class Solution(object):
     memoize = {}
     def _Longest_Palindromic_Substring(self, s):
