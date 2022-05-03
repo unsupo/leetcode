@@ -12,20 +12,18 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
-        if self.is_palandrome(s):
+        rev = s[::-1]
+        if s == rev:
             return s
         if s in self.memoize:
             return self.memoize[s]
-        if s[::-1] in self.memoize:
-            return self.memoize[s[::-1]]
+        if rev in self.memoize:
+            return self.memoize[rev]
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
-
-    def is_palandrome(self, s):
-        return s == s[::-1]
 
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
