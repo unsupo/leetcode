@@ -8,12 +8,16 @@ class Solution(object):
         # one path cuts off left char
         # one path cuts off right char
         # thrid path splits in half
-        if s == s[::-1]:
+        if self.is_palandrome(s):
             return s
+        
         s[1:]
         s[:-1]
         s[len(s)//2:]
         s[:-len(s)//2]
+
+    def is_palandrome(self,s):
+        return s == s[::-1]
 
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
