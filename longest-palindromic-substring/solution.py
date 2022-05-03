@@ -22,8 +22,8 @@ class Solution(object):
             return self.memoize[s]
         if rev in self.memoize:
             return self.memoize[rev]
-        a, ar = self._Longest_Palindromic_Substring(s[1:])
-        b, br = self._Longest_Palindromic_Substring(s[:-1])
+        a, ar = self.__Longest_Palindromic_Substring(s[1:])
+        b, br = self.__Longest_Palindromic_Substring(s[:-1])
         longest = b
         longestr = br
         if len(a) > len(b):
