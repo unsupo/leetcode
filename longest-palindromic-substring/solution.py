@@ -13,11 +13,11 @@ class Solution(object):
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         c = self._Longest_Palindromic_Substring(s[1:-1])
-        d = self._Longest_Palindromic_Substring(s[len(s)//2:])
-        e = self._Longest_Palindromic_Substring(s[:-len(s)//2])
-        return a,b,c,d,e
+        d = self._Longest_Palindromic_Substring(s[len(s) // 2:])
+        e = self._Longest_Palindromic_Substring(s[:-len(s) // 2])
+        return a, b, c, d, e
 
-    def is_palandrome(self,s):
+    def is_palandrome(self, s):
         return s == s[::-1]
 
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
