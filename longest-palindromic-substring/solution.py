@@ -4,8 +4,8 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
-        # Have solution here and remove pass
-        pass
+        for i in s:
+            
 
         
 def test0():
