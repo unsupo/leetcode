@@ -7,8 +7,8 @@ class Solution(object):
         if s == s[::-1]:
             return s
         l = []
-        for i in s:
-
+        for i in range(len(s)):
+            
 
         
 def test0():
