@@ -9,8 +9,10 @@ class Solution(object):
         longest = 0
         for i in range(len(s)):
             if s[i:s] == s[i:s][::-1]:
-                
-        return longest
+                return len(s[i:s]) # can be done better
+            if s[i:s] == s[i:s][::-1]:
+                return len(s[:-i]) # can be done better
+        return longest # length of 0 only?
         
 def test0():
     assert Solution()._Longest_Palindromic_Substring("babad") == "bab"
