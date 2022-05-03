@@ -48,8 +48,9 @@ class Solution(object):
         return longest
 
     def is_palindrone(self,s):
-        for i in range(len(s)):
-            if s[i] != s[-i]:
+        l = len(s)
+        for i in range(l):
+            if s[i] != s[l-i]:
                 return False
         return True
 
