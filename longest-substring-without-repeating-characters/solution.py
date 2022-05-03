@@ -26,8 +26,11 @@ def test1():
 def test2():
     assert Solution()._Longest_Substring_Without_Repeating_Characters("pwwkew") == 3
 
-            
+def test3():
+    assert Solution()._Longest_Substring_Without_Repeating_Characters(" ") == 1
+
 if __name__ == '__main__':
     test0()
     test1()
     test2()
+    test3()
