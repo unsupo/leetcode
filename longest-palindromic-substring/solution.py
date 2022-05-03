@@ -14,7 +14,7 @@ class Solution(object):
         b = self._Longest_Palindromic_Substring(s[:-1])
         c = self._Longest_Palindromic_Substring(s[len(s)//2:])
         d = self._Longest_Palindromic_Substring(s[:-len(s)//2])
-        
+        return a,b,c,d
 
     def is_palandrome(self,s):
         return s == s[::-1]
