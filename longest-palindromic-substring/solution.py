@@ -29,7 +29,22 @@ func:'test8' args:[(), {}] took: 0.0333 sec
 class Solution(object):
     memoize = {}
     def _Longest_Palindromic_Substring(self, s):
-        pass
+        if s == s[::-1]: return s
+        l=''
+        v=0
+        for i in range(len(s)):
+            ss=s[i]
+            if ss == ss[::-1]:
+                if len(ss) > v:
+                    v=len(ss)
+                    l=ss
+            for j in range(i+1,len(s)):
+                ss+=s[j]
+                if ss == ss[::-1]:
+                    if len(ss) > v:
+                        v=len(ss)
+                        l=ss
+        return l
 
     def attemp3(self, s):
         # assume 1 exists then move up to two until you don't find a palendrone
