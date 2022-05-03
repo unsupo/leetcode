@@ -90,6 +90,10 @@ def test6():
 
 
 if __name__ == '__main__':
+
+    mem_usage = memory_usage(f)
+    print('Memory usage (in chunks of .1 seconds): %s' % mem_usage)
+    print('Maximum memory usage: %s' % max(mem_usage))
     test0()
     test1()
     test2()
