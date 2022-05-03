@@ -7,7 +7,7 @@ from time import time
 class Solution(object):
     memoize = {}
 
-    def _Longest_Palindromic_Substring(self, s):
+    def attempt3(self, s):
         if s == s[::-1]: return s
         l = ''
         v = 0
@@ -25,7 +25,7 @@ class Solution(object):
                         l = ss
         return l
 
-    def attemp3(self, s):
+    def _Longest_Palindromic_Substring(self, s):
         # assume 1 exists then move up to two until you don't find a palendrone
         if self.is_palindrone(s):  # .97
             return s
@@ -174,3 +174,18 @@ def run_tests():
 
 if __name__ == '__main__':
     run_tests()
+
+"""
+func:'test0' args:[(), {}] took: 0.0000 sec
+func:'test1' args:[(), {}] took: 0.0000 sec
+func:'test2' args:[(), {}] took: 0.0000 sec
+func:'test3' args:[(), {}] took: 0.0000 sec
+func:'test4' args:[(), {}] took: 0.1881 sec
+func:'test5' args:[(), {}] took: 0.0353 sec
+func:'test6' args:[(), {}] took: 0.2369 sec
+func:'test7' args:[(), {}] took: 0.0020 sec
+func:'test8' args:[(), {}] took: 0.0000 sec
+func:'test9' args:[(), {}] took: 0.0242 sec
+func:'test10' args:[(), {}] took: 0.1699 sec
+func:'run_tests' args:[(), {}] took: 0.6568 sec
+"""
