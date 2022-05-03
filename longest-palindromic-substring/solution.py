@@ -129,12 +129,11 @@ def test7():
 
 
 if __name__ == '__main__':
-    print(Solution().is_palindrone("gykrkyg"))
     # test0()
     # test1()
     # test2()
     # test3()
     # test4()
     # test5()
-    # test6()
+    test6()
     # test7()
