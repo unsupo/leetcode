@@ -6,7 +6,7 @@ class Solution(object):
         """
         #           aacabdkacaa
         #              /\
-        # aacabdkacaa       aacabdkacaa
+        #  aacabdkaca       acabdkacaa
         pass
 
     def attempt1(self,s): # doesn't work if answer not in middle, no exmaple was given like this
