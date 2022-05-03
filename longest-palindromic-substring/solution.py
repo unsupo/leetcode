@@ -31,7 +31,7 @@ class Solution(object):
                 return sr
 
     def attempt2(self, s, r):
-        return self._attempt2(s, len(s) // 2 ** 9)
+        return self._attempt2(s, len(s) // 2 ** r)
 
     def _attempt2(self, s, r):
         """
