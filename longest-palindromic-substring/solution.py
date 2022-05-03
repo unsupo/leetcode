@@ -23,8 +23,8 @@ class Solution(object):
         b = self._Longest_Palindromic_Substring(s[:-2])
         c = self._Longest_Palindromic_Substring(s[1:])
         d = self._Longest_Palindromic_Substring(s[:-1])
-        # a if len(a) > len(b) else b  # 
-        longest = sorted([a, b], key=lambda x: len(x), reverse=True)[0]
+        # a if len(a) > len(b) else b  #
+        longest = sorted([a, b, c,d], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
 
