@@ -42,8 +42,8 @@ class Solution(object):
             return s
         if s in self.memoize:
             return self.memoize[s]
-        a = self._attempt2(s[r:])
-        b = self._attempt2(s[:-r])
+        a = self._attempt2(s[r:],r)
+        b = self._attempt2(s[:-r],r)
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
