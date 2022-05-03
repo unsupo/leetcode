@@ -13,7 +13,17 @@ babad
         bab
 
 """
-
+"""
+func:'test0' args:[(), {}] took: 0.0000 sec
+func:'test1' args:[(), {}] took: 0.0000 sec
+func:'test2' args:[(), {}] took: 0.0000 sec
+func:'test3' args:[(), {}] took: 0.0001 sec
+func:'test4' args:[(), {}] took: 0.2025 sec
+func:'test5' args:[(), {}] took: 0.0511 sec
+func:'test6' args:[(), {}] took: 0.2553 sec
+func:'test7' args:[(), {}] took: 0.0047 sec
+func:'test8' args:[(), {}] took: 0.0333 sec
+"""
 
 class Solution(object):
     memoize = {}
@@ -26,9 +36,9 @@ class Solution(object):
         # palendrone length
         for i in range(2, len(s)):  # start at length 2
             for j in range(len(s) - i + 1):
-                v = s[j:i + j]
-                if self.is_palindrone(v):
-                    palendrone = v if len(v) > len(palendrone) else palendrone
+                # v = s[j:i + j]
+                if self.is_palindrone(s[j:i + j]):
+                    palendrone = s[j:i + j] if len(s[j:i + j]) > len(palendrone) else palendrone
                     break  # break here, no need to find all of this length
         return palendrone
 
