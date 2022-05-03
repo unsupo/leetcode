@@ -21,9 +21,10 @@ class Solution(object):
             return self.memoize[rev]
         a = self._Longest_Palindromic_Substring(s[2:])
         b = self._Longest_Palindromic_Substring(s[:-2])
-        a = self._Longest_Palindromic_Substring(s[1:])
-        b = self._Longest_Palindromic_Substring(s[:-1])
-        longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
+        c = self._Longest_Palindromic_Substring(s[1:])
+        d = self._Longest_Palindromic_Substring(s[:-1])
+        # a if len(a) > len(b) else b  # 
+        longest = sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
 
