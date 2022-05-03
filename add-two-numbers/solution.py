@@ -51,8 +51,8 @@ class Solution(object):
         while True:
             l2, l3, l4, r = self.calc(l2, l3, l4, r)
             if not l3.next:
-                l3 = l2
                 l1 = l3
+                l3 = l2
             if not l3.next: break
         l2, l3, l4, r = self.calc(l1, l3, l4, r)
         if r > 0:
