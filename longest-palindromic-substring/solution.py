@@ -16,9 +16,7 @@ class Solution(object):
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         c = self._Longest_Palindromic_Substring(s[1:-1])
-        d = self._Longest_Palindromic_Substring(s[len(s) // 2:])
-        e = self._Longest_Palindromic_Substring(s[:-len(s) // 2])
-        longest = sorted([a, b, c, d, e], key=lambda x: len(x), reverse=True)[0]
+        longest = sorted([a, b, c], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
 
