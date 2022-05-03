@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: 2.00000
         """
         nums1.extend(nums2)
-        sorted(nums1)
+        nums1 = sorted(nums1)
         return nums1[len(nums1) // 2] if len(nums1) % 2 == 1 else \
             (nums1[len(nums1) // 2] + nums1[len(nums1) // 2 - 1]) / 2
 
