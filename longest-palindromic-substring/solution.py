@@ -6,14 +6,13 @@ class Solution(object):
         """
         if s == s[::-1]:
             return s
-        longest = 0
         l = len(s)
         for i in range(1,l):
             if s[i:l] == s[i:l][::-1]:
-                return len(s[i:l]) # can be done better
+                return s[i:l] # can be done better
             if s[:-i] == s[:-i][::-1]:
-                return len(s[:-i]) # can be done better
-        return longest # length of 0 only?
+                return s[:-i] # can be done better
+        return None # length of 0 only?
         
 def test0():
     assert Solution()._Longest_Palindromic_Substring("babad") == "bab"
