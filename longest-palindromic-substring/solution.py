@@ -4,7 +4,9 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
-        if s == s[::-1]
+        if s == s[::-1]:
+            return s
+        
         for i in s:
 
 
