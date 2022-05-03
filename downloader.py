@@ -124,7 +124,7 @@ except FileNotFoundError:
     pass
 with open(dir_name + '/README.md', 'w') as f:
     f.write(
-        '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green"),
+        '# {}\n{} :thumbsup:{} :thumbsdown:{}<br/>\n\n---\n{}\n<br/>'.format(title, color.format(diff, color="green" if diff == "Easy" else "yellow" if diff == "Medium" else "red"),
                                                                              up_votes, down_votes, description))
     f.write('\n'.join([str(i) for i in examples]) + "\n\n")
     f.write(constraints + "\n\n")
