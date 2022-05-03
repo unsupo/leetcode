@@ -18,7 +18,8 @@ class Solution(object):
 
 
 def test0():
-    assert Solution()._Longest_Palindromic_Substring("babad") == "bab"
+    v = Solution()._Longest_Palindromic_Substring("babad") \
+    assert v == "bab" or v == "aba"
 
 
 def test1():
