@@ -8,7 +8,7 @@ class Solution(object):
             return s
         longest = 0
         l = len(s)
-        for i in range(len(s)):
+        for i in range(l-1):
             if s[i:l] == s[i:l][::-1]:
                 return len(s[i:l]) # can be done better
             if s[:-i] == s[:-i][::-1]:
