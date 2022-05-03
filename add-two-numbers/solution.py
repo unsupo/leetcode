@@ -48,7 +48,7 @@ class Solution(object):
         l3 = l1
         l4 = None
         r = 0
-        while l3.next:
+        while True:
             v = l3.val + l2.val
             l3 = l3.next
             l2 = l2.next
@@ -61,6 +61,7 @@ class Solution(object):
                 v = v % 10
             l4 = ListNode(v, l4)
             if not l3.next: l3 = l2
+            if not l3.next: break
         if r > 0:
             l4 = ListNode(r, l4)
         return l4
