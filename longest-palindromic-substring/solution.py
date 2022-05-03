@@ -9,11 +9,11 @@ class Solution(object):
         l = len(s)
         for i in range(1, l):
             if s[i:l] == s[i:l][::-1]:
-                return s[i:l]  
+                return s[i:l]
             if s[:-i] == s[:-i][::-1]:
                 return s[:-i]
-            if s[:-i] == s[:-i][::-1]:
-                return s[:-i]
+            if s[i:-i] == s[i:-i][::-1]:
+                return s[i:-i]
         return None
 
 
