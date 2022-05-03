@@ -6,9 +6,17 @@ class Solution(object):
         :rtype: [7,0,8]
         """
         l5 = []
+        bigger = l1
+        smaller = l2
+        if len(l1) < len(l2):
+            bigger = l2
+            smaller = l1
         r = 0
-        for i in range(len(l1)):
-            v = l1[i] + l2[i]
+        for i in range(len(bigger)):
+            if i >= len(smaller):
+                v = bigger[i]
+            else:
+                v = l1[i] + l2[i]
             if r > 0:
                 v += r
                 r = 0
