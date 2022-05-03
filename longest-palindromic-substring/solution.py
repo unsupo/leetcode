@@ -7,21 +7,22 @@ class Solution(object):
         if s == s[::-1]:
             return s
         l = len(s)
-        for i in range(1,l):
+        for i in range(1, l):
             if s[i:l] == s[i:l][::-1]:
-                return s[i:l] # can be done better
+                return s[i:l]  # can be done better
             if s[:-i] == s[:-i][::-1]:
-                return s[:-i] # can be done better
-        return None # length of 0 only?
-        
+                return s[:-i]  # can be done better
+        return None  # length of 0 only?
+
+
 def test0():
     assert Solution()._Longest_Palindromic_Substring("babad") == "bab"
 
-            
+
 def test1():
     assert Solution()._Longest_Palindromic_Substring("cbbd") == "bb"
 
-            
+
 if __name__ == '__main__':
     test0()
     test1()
