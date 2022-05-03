@@ -128,11 +128,11 @@ def test7():
 
 
 if __name__ == '__main__':
-    # test0()
-    # test1()
-    # test2()
-    # test3()
-    # test4()
-    # test5()
+    test0()
+    test1()
+    test2()
+    test3()
+    test4()
+    test5()
     test6()  # 1.17
-    # test7()
+    test7()
