@@ -34,12 +34,13 @@ class Solution(object):
             return s
         palendrone = s[0]
         # palendrone length
-        for i in range(2, len(s)):  # start at length 2
+        for i in reversed(range(2, len(s))):  # start at length 2
             for j in range(len(s) - i + 1):
                 v = s[j:i + j]
                 if self.is_palindrone(v):
-                    palendrone = v if len(v) > len(palendrone) else palendrone
-                    break  # break here, no need to find all of this length
+                    return v
+                    # palendrone = v if len(v) > len(palendrone) else palendrone
+                    # break  # break here, no need to find all of this length
         return palendrone
 
     def attempt2(self, s):
