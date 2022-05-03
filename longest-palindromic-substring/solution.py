@@ -4,8 +4,9 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
+        if s == 
         for i in s:
-            
+
 
         
 def test0():
