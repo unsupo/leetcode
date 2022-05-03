@@ -49,15 +49,15 @@ class Solution(object):
 
 
 def test0():
-    assert Solution()._Add_Two_Numbers([2, 4, 3], [5, 6, 4]) == [7, 0, 8]
+    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]), ListNode.to_list_node([5, 6, 4]) == ListNode.to_list_node([7, 0, 8]
 
 
 def test1():
-    assert Solution()._Add_Two_Numbers([0], [0]) == [0]
+    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([0], ListNode.to_list_node([0]) == ListNode.to_list_node([0]
 
 
 def test2():
-    assert Solution()._Add_Two_Numbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]) == [8, 9, 9, 9, 0, 0, 0, 1]
+    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([9, 9, 9, 9, 9, 9, 9], ListNode.to_list_node([9, 9, 9, 9]) == ListNode.to_list_node([8, 9, 9, 9, 0, 0, 0, 1]
 
 
 if __name__ == '__main__':
