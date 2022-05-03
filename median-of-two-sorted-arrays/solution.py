@@ -5,7 +5,7 @@ class Solution(object):
         :type nums2: [2]
         :rtype: 2.00000
         """
-        nums1.extend(nums2)
+        sorted(nums1.extend(nums2))
         return nums1[len(nums1) // 2] if len(nums1) % 2 == 1 else \
             (nums1[len(nums1) // 2] + nums1[len(nums1) // 2 - 1]) / 2
 
