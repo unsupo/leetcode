@@ -10,7 +10,7 @@ class Solution(object):
         l5 = []
         r = 0
         for i in range(len(l1)):
-            v = l1[i]+l2[2]
+            v = l1[i]+l2[i]
             if v//10 >= 1:
                 r = v//10
                 v = v%10
