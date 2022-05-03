@@ -24,6 +24,8 @@ class Solution(object):
         a = self.attempt2(s[1:])
         b = self.attempt2(s[:-1])
         longest = a if len(a) > len(b) else b #sorted([a, b], key=lambda x: len(x), reverse=True)[0]
+        if len(s) != 1:
+            self.memoize[s] = longest
         self.memoize[s] = longest
         return longest
 
