@@ -74,6 +74,17 @@ class Solution(object):
         return l2, l3, l4, r
 
 
+    # Function to reverse the linked list
+    def reverse(self):
+        prev = None
+        current = self.head
+        while(current is not None):
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
+
 def test0():
     assert Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
                                        ListNode.to_list_node([5, 6, 4])) == ListNode.to_list_node([7, 0, 8])
