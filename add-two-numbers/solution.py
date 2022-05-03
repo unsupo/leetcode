@@ -25,6 +25,8 @@ class Solution(object):
                 r = v // 10
                 v = v % 10
             l5.append(v)
+        if r > 0:
+            l5.append(r)
         return l5
 
 
