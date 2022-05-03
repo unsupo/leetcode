@@ -5,8 +5,8 @@ class Solution(object):
         :type nums2: [2]
         :rtype: 2.00000
         """
-        # Have solution here and remove pass
-        pass
+        nums3 = nums1.extend(nums2)
+        return len(nums3)%2
 
         
 def test0():
