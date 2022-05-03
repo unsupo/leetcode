@@ -132,6 +132,11 @@ def test8():
     assert Solution()._Longest_Palindromic_Substring("abb") == "bb"
 
 
+@timing
+def test8():
+    assert Solution()._Longest_Palindromic_Substring("abb") == "bb"
+
+
 if __name__ == '__main__':
     test0()
     test1()
