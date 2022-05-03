@@ -75,7 +75,8 @@ class Solution(object):
 
 
     # Function to reverse the linked list
-    def reverse(self):
+    def reverse(self, node):
+        n = ListNode()
         prev = None
         current = self.head
         while(current is not None):
