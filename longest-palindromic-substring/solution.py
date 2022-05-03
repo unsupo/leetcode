@@ -26,6 +26,10 @@ def test1():
     assert Solution()._Longest_Palindromic_Substring("cbbd") == "bb"
 
 
+def test2():
+    assert Solution()._Longest_Palindromic_Substring("cbbd") == "bb"
+
+
 if __name__ == '__main__':
     test0()
     test1()
