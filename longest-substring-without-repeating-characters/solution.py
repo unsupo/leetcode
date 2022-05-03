@@ -14,20 +14,22 @@ class Solution(object):
             seen.add(i)
         return longest
 
-        
+
 def test0():
     assert Solution()._Longest_Substring_Without_Repeating_Characters("abcabcbb") == 3
 
-            
+
 def test1():
     assert Solution()._Longest_Substring_Without_Repeating_Characters("bbbbb") == 1
 
-            
+
 def test2():
     assert Solution()._Longest_Substring_Without_Repeating_Characters("pwwkew") == 3
 
+
 def test3():
     assert Solution()._Longest_Substring_Without_Repeating_Characters(" ") == 1
+
 
 if __name__ == '__main__':
     test0()
