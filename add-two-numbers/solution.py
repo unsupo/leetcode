@@ -79,6 +79,7 @@ class Solution(object):
         l = []
         while node.next:
             l.append(node.val)
+            node = node.next
         n = None
         for i in l:
             n = ListNode(i,n)
