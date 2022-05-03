@@ -10,10 +10,9 @@ class Solution(object):
         # one path cuts off right char
         # thrid path splits in half
         if self.is_palandrome(s):
-            self.memoize.add(s)
             return s
         if s in self.memoize:
-            return s
+            return self.memoize[s]
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         c = self._Longest_Palindromic_Substring(s[1:-1])
