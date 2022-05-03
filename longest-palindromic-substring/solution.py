@@ -28,8 +28,10 @@ func:'test8' args:[(), {}] took: 0.0333 sec
 
 class Solution(object):
     memoize = {}
-
     def _Longest_Palindromic_Substring(self, s):
+        pass
+
+    def attemp3(self, s):
         # assume 1 exists then move up to two until you don't find a palendrone
         if self.is_palindrone(s):  # .97
             return s
