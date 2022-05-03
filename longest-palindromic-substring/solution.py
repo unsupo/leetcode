@@ -17,9 +17,9 @@ class Solution(object):
         """
         rev = s[::-1]
         if s == rev:
-            return s
+            return s, rev
         if s in self.memoize:
-            return self.memoize[s]
+            return self.memoize[s], 
         if rev in self.memoize:
             return self.memoize[rev]
         a, ar = self.__Longest_Palindromic_Substring(s[1:])
