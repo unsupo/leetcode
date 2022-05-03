@@ -13,11 +13,9 @@ class Solution(object):
             return s
         if s in self.memoize:
             return self.memoize[s]
-        a = self._Longest_Palindromic_Substring(s[1:])
-        b = self._Longest_Palindromic_Substring(s[:-1])
-        longest = sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        self.memoize[s] = longest
-        return longest
+        a = self._Longest_Palindromic_Substring(s[:-1])
+        self.memoize[s] = a
+        return a
 
     def is_palandrome(self, s):
         return s == s[::-1]
