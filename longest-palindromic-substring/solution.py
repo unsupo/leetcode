@@ -8,6 +8,9 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
+        return self.__Longest_Palindromic_Substring(s)[0]
+
+    def __Longest_Palindromic_Substring(self, s):
         """
         :type s: "babad"
         :rtype: "bab"
@@ -19,13 +22,16 @@ class Solution(object):
             return self.memoize[s]
         if rev in self.memoize:
             return self.memoize[rev]
-        a = self._Longest_Palindromic_Substring(s[1:])
-        b = self._Longest_Palindromic_Substring(s[:-1])
-        longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        rev = longest[::-1]
-        if rev not in self.memoize:
+        a, ar = self._Longest_Palindromic_Substring(s[1:])
+        b, br = self._Longest_Palindromic_Substring(s[:-1])
+        longest = b
+        longestr = br
+        if len(a) > len(b):
+            longest = a
+            longestr = ar
+        if longestr not in self.memoize:
             self.memoize[s] = longest
-        return longest
+        return longest, rev
 
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
