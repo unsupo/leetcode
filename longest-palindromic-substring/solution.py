@@ -11,7 +11,7 @@ class Solution(object):
         for i in range(len(s)):
             if s[i:l] == s[i:l][::-1]:
                 return len(s[i:l]) # can be done better
-            if s[i:s] == s[i:l][::-1]:
+            if s[:-i] == s[:-i][::-1]:
                 return len(s[:-i]) # can be done better
         return longest # length of 0 only?
         
