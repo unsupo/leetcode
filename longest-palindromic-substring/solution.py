@@ -5,10 +5,12 @@ from time import time
 
 """
 babad
-
-baba
-abab
-
+    baba
+        bab
+        aba
+    abab
+        aba
+        bab
 
 """
 class Solution(object):
