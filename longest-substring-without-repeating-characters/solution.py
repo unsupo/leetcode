@@ -6,15 +6,19 @@ class Solution(object):
         """
         longest = 0
         seen = []
-        for i in range(len(s)):
-            seen.add(set())
-            if i in seen:
-                if len(seen) > longest:
-                    longest = len(seen)
-                seen = set()
-            seen.add(i)
-        if len(seen) > longest:
-            longest = len(seen)
+        done = []
+        for i in s:
+            s = set()
+            seen.append(s)
+            for j in seen:
+                if i in j:
+                    done.append(j)
+                    seen.remove(j)
+            s.add(i)
+        done.extend(seen)
+        for i in done:
+            if len(i) > longest:
+                longest = len(i)
         return longest
 
 
