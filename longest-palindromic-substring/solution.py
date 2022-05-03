@@ -24,7 +24,7 @@ class Solution(object):
             return s
         palendrone = s[0]
         # palendrone length
-        for i in range(2, len(s)):  # start at length 2
+        for i in range(2, len(s)-1):  # start at length 2
             for j in range(len(s) - i + 1):
                 if self.is_palindrone(s[j:i + j]):
                     palendrone = s[j:i + j] if len(s[j:i + j]) > len(palendrone) else palendrone
