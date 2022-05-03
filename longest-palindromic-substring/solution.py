@@ -19,16 +19,12 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
-        rev = s[::-1]
-        if s == rev:
+        # assume 1 exists then move up to two until you don't find a palendrone
+        if self.is_palindrone(s):  # .97
             return s
-        for i in range(len(s)):
-            sl = s[:-1]
-            if sl == sl[::-1]:
-                return sl
-            sr = s[1:]
-            if sr == sr[::-1]:
-                return sr
+        for i in range(len(s)-1):
+            for j in range(len(s)//i):
+                if self.is_palindrone(s[])
 
     def attempt2(self, s):
         """
