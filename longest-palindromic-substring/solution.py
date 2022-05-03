@@ -7,10 +7,11 @@ class Solution(object):
         if s == s[::-1]:
             return s
         longest = 0
+        l = len(s)
         for i in range(len(s)):
-            if s[i:s] == s[i:s][::-1]:
-                return len(s[i:s]) # can be done better
-            if s[i:s] == s[i:s][::-1]:
+            if s[i:l] == s[i:l][::-1]:
+                return len(s[i:l]) # can be done better
+            if s[i:s] == s[i:l][::-1]:
                 return len(s[:-i]) # can be done better
         return longest # length of 0 only?
         
