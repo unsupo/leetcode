@@ -13,7 +13,6 @@ class Solution(object):
             return s
         if s in self.memoize:
             return self.memoize[s]
-        # c = self._Longest_Palindromic_Substring(s[1:-1])
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         longest = sorted([a, b], key=lambda x: len(x), reverse=True)[0]
