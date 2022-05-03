@@ -45,7 +45,8 @@ class Solution(object):
         a = self._attempt2(s[r:], r)
         b = self._attempt2(s[:-r], r)
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        self.memoize[s] = longest
+        if len(longest) > 1:
+            self.memoize[s] = longest
         return longest
 
     def is_palindrone(self, s):
