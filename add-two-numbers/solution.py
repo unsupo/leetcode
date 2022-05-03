@@ -49,8 +49,8 @@ class Solution(object):
         l4 = None
         r = 0
         while l3.next:
-            v = l1.val + l2.val
-            l1 = l1.next
+            v = l3.val + l2.val
+            l3 = l3.next
             l2 = l2.next
             if r > 0:
                 v += r
