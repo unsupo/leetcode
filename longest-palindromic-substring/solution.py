@@ -50,7 +50,7 @@ class Solution(object):
     def is_palindrone(self,s):
         l = len(s)
         for i in range(l):
-            if s[i] != s[l-i]:
+            if s[i] != s[l-i-1]:
                 return False
         return True
 
