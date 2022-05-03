@@ -10,11 +10,15 @@ class Solution(object):
         for i in s:
             s = set()
             seen.append(s)
+            remove = []
             for j in seen:
                 if i in j:
                     done.append(j)
-                    seen.remove(j)
-                j.add(i)
+                    remove.append(j)
+                else:
+                    j.add(i)
+            for j in remove:
+                seen.remove(j)
         done.extend(seen)
         for i in done:
             if len(i) > longest:
