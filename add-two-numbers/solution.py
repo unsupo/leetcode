@@ -5,7 +5,7 @@ class Solution(object):
         :type l2: [5,6,4]
         :rtype: [7,0,8]
         """
-        
+        l1[::-1]
         # Have solution here and remove pass
         pass
 
