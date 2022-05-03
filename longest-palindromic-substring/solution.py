@@ -6,9 +6,9 @@ class Solution(object):
         """
         if s == s[::-1]:
             return s
-        
+        l = []
         for i in s:
-
+            
 
         
 def test0():
