@@ -30,10 +30,7 @@ class Solution(object):
             if sr == sr[::-1]:
                 return sr
 
-    def attempt2(self, s, r):
-        return self._attempt2(s, len(s) // 2 ** r)
-
-    def _attempt2(self, s, r):
+    def attempt2(self, s):
         """
         :type s: "babad"
         :rtype: "bab"
@@ -42,11 +39,10 @@ class Solution(object):
             return s
         if s in self.memoize:
             return self.memoize[s]
-        a = self._attempt2(s[r:], r)
-        b = self._attempt2(s[:-r], r)
+        a = self.attempt2(s[1:])
+        b = self.attempt2(s[:-1])
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        if len(longest) > 1:
-            self.memoize[s] = longest
+        self.memoize[s] = longest
         return longest
 
     def is_palindrone(self, s):
@@ -130,11 +126,6 @@ def test7():
         "iptmykvjanwiihepqhzupneckpzomgvzmyoybzfynybpfybngttozprjbupciuinpzryritfmyxyppxigitnemanreexcpwscvcwddnfjswgprabdggbgcillisyoskdodzlpbltefiz") == "illi"
 
 
-@timing
-def t(s, r, v):
-    return Solution().attempt2(s, r), v
-
-
 if __name__ == '__main__':
     # test0()
     # test1()
@@ -142,9 +133,5 @@ if __name__ == '__main__':
     # test3()
     # test4()
     # test5()
-    # test6()  # 1.17
+    test6()  # 1.17
     # test7()
-    s = "zudfweormatjycujjirzjpyrmaxurectxrtqedmmgergwdvjmjtstdhcihacqnothgttgqfywcpgnuvwglvfiuxteopoyizgehkwuvvkqxbnufkcbodlhdmbqyghkojrgokpwdhtdrwmvdegwycecrgjvuexlguayzcammupgeskrvpthrmwqaqsdcgycdupykppiyhwzwcplivjnnvwhqkkxildtyjltklcokcrgqnnwzzeuqioyahqpuskkpbxhvzvqyhlegmoviogzwuiqahiouhnecjwysmtarjjdjqdrkljawzasriouuiqkcwwqsxifbndjmyprdozhwaoibpqrthpcjphgsfbeqrqqoqiqqdicvybzxhklehzzapbvcyleljawowluqgxxwlrymzojshlwkmzwpixgfjljkmwdtjeabgyrpbqyyykmoaqdambpkyyvukalbrzoyoufjqeftniddsfqnilxlplselqatdgjziphvrbokofvuerpsvqmzakbyzxtxvyanvjpfyvyiivqusfrsufjanmfibgrkwtiuoykiavpbqeyfsuteuxxjiyxvlvgmehycdvxdorpepmsinvmyzeqeiikajopqedyopirmhymozernxzaueljjrhcsofwyddkpnvcvzixdjknikyhzmstvbducjcoyoeoaqruuewclzqqqxzpgykrkygxnmlsrjudoaejxkipkgmcoqtxhelvsizgdwdyjwuumazxfstoaxeqqxoqezakdqjwpkrbldpcbbxexquqrznavcrprnydufsidakvrpuzgfisdxreldbqfizngtrilnbqboxwmwienlkmmiuifrvytukcqcpeqdwwucymgvyrektsnfijdcdoawbcwkkjkqwzffnuqituihjaklvthulmcjrhqcyzvekzqlxgddjoir"
-    v = "gykrkyg"
-    for r in range(5, 10):
-        print(t(s, r, v))
