@@ -3,9 +3,18 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-        
+
+    @staticmethod
+    def to_list_node(arr):
+        rarr = arr[::-1]
+        ln = ListNode(rarr[0])
+        for i in rarr[1:]:
+            ln = ListNode(i, ln)
+        return ln
+
+
 class Solution(object):
-    def _Add_Two_Numbers(self, l1, l2):
+    def _Add_Two_Numbers_list(self, l1, l2):
         """
         :type l1: [2,4,3]
         :type l2: [5,6,4]
@@ -34,6 +43,9 @@ class Solution(object):
         if r > 0:
             l5.append(r)
         return l5
+
+    def _Add_Two_Numbers(self, l1, l2):
+        pass
 
 
 def test0():
