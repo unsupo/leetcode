@@ -102,8 +102,7 @@ def test0():
 
 def test1():
     assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([0]), ListNode.to_list_node([0])),
-                           ListNode.to_list_node(
-                               [0]))
+                           ListNode.to_list_node([0]))
 
 
 def test2():
