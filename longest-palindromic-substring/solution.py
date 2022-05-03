@@ -4,12 +4,18 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
-        #           aacabdkacaa
-        #              /\
-        #  aacabdkaca       acabdkacaa
-        pass
+        # greedy tree search
+        # one path cuts off left char
+        # one path cuts off right char
+        # thrid path splits in half
+        if s == s[::-1]:
+            return s
+        s[1:]
+        s[:-1]
+        s[len(s)//2:]
+        s[:-len(s)//2]
 
-    def attempt1(self,s): # doesn't work if answer not in middle, no exmaple was given like this
+    def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
             return s
         l = len(s)
