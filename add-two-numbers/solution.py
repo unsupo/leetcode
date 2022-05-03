@@ -57,7 +57,7 @@ class Solution(object):
         l2, l3, l4, r = self.calc(l1, l3, l4, r)
         if r > 0:
             l4 = ListNode(r, l4)
-        return l4
+        return self.reverse(l4)
 
     def calc(self, l2, l3, l4, r):
         v = l3.val + l2.val
@@ -76,15 +76,13 @@ class Solution(object):
 
     # Function to reverse the linked list
     def reverse(self, node):
-        n = ListNode()
-        prev = None
-        current = self.head
-        while(current is not None):
-            next = current.next
-            current.next = prev
-            prev = current
-            current = next
-        self.head = prev
+        l = []
+        while node.next:
+            l.append(node.val)
+        n = None
+        for i in l:
+            n = ListNode(i,n)
+        return n
 
 def test0():
     assert Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
