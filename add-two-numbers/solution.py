@@ -16,10 +16,12 @@ class ListNode(object):
     def equals(l1, l2):
         while l1.next:
             if l1.val != l2.val: return False
-            if l1.next and not l2.next: return False
+            if l1.next and not l2.next or l2.next and not l1.next: return False
             l1 = l1.next
             l2 = l2.next
-
+        if l1.val != l2.val: return False
+        if l1.next and not l2.next or l2.next and not l1.next: return False
+        return True
 
 class Solution(object):
     def _Add_Two_Numbers_list(self, l1, l2):
