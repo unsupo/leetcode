@@ -11,9 +11,13 @@ class Solution(object):
         r = 0
         for i in range(len(l1)):
             v = l1[i]+l2[2]
-            if v/10 >= 1:
-                r = v/10
-            else: r = 0
+            if v//10 >= 1:
+                r = v//10
+                v = v%10
+            else:
+                v += r
+                r = 0
+            l5.append(v)
 
 def test0():
     assert Solution()._Add_Two_Numbers([2,4,3], [5,6,4]) == [7,0,8]
