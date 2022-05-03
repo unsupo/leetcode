@@ -1,7 +1,10 @@
 from memory_profiler import profile
+
+
 class Solution(object):
     memoize = {}
 
+    @profile
     def _Longest_Palindromic_Substring(self, s):
         """
         :type s: "babad"
@@ -83,7 +86,7 @@ def test5():
     assert Solution()._Longest_Palindromic_Substring(
         "jglknendplocymmvwtoxvebkekzfdhykknufqdkntnqvgfbahsljkobhbxkvyictzkqjqydczuxjkgecdyhixdttxfqmgksrkyvopwprsgoszftuhawflzjyuyrujrxluhzjvbflxgcovilthvuihzttzithnsqbdxtafxrfrblulsakrahulwthhbjcslceewxfxtavljpimaqqlcbrdgtgjryjytgxljxtravwdlnrrauxplempnbfeusgtqzjtzshwieutxdytlrrqvyemlyzolhbkzhyfyttevqnfvmpqjngcnazmaagwihxrhmcibyfkccyrqwnzlzqeuenhwlzhbxqxerfifzncimwqsfatudjihtumrtjtggzleovihifxufvwqeimbxvzlxwcsknksogsbwwdlwulnetdysvsfkonggeedtshxqkgbhoscjgpiel") == "sknks"
 
-@profile
+
 @timing
 def test6():
     assert Solution()._Longest_Palindromic_Substring(
