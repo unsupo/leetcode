@@ -6,6 +6,9 @@ from time import time
 
 class Solution(object):
     memoize = {}
+    def _Longest_Palindromic_Substring(self, s):
+        
+
 
     def attempt3(self, s):
         if s == s[::-1]: return s
@@ -25,7 +28,7 @@ class Solution(object):
                         l = ss
         return l
 
-    def _Longest_Palindromic_Substring(self, s):
+    def attempt4(self, s):
         # assume 1 exists then move up to two until you don't find a palendrone
         if self.is_palindrone(s):  # .97
             return s
