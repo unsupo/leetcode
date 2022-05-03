@@ -30,7 +30,7 @@ class Solution(object):
             if sr == sr[::-1]:
                 return sr
 
-    def attempt2(self, s):
+    def attempt2(self, s, r):
         return self._attempt2(s, len(s) // 2 ** 9)
 
     def _attempt2(self, s, r):
@@ -131,7 +131,7 @@ def test7():
 
 @timing
 def t(s, r, v):
-    assert Solution()._attempt2(s, r) == v
+    assert Solution().attempt2(s, r) == v
 
 
 if __name__ == '__main__':
