@@ -80,6 +80,7 @@ class Solution(object):
         while node.next:
             l.append(node.val)
             node = node.next
+        l.append(node.val)
         n = None
         for i in l:
             n = ListNode(i,n)
