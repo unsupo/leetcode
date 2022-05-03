@@ -10,11 +10,10 @@ class Solution(object):
         # thrid path splits in half
         if self.is_palandrome(s):
             return s
-        
-        s[1:]
-        s[:-1]
-        s[len(s)//2:]
-        s[:-len(s)//2]
+        a = self._Longest_Palindromic_Substring(s[1:])
+        b = self._Longest_Palindromic_Substring(s[:-1])
+        c = self._Longest_Palindromic_Substring(s[len(s)//2:])
+        d = self._Longest_Palindromic_Substring(s[:-len(s)//2])
 
     def is_palandrome(self,s):
         return s == s[::-1]
