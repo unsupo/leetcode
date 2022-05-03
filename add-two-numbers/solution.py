@@ -52,9 +52,9 @@ class Solution(object):
             l2, l3, l4, r = self.calc(l2, l3, l4, r)
             if not l3.next:
                 l3 = l2
-                
+                l1 = l3
             if not l3.next: break
-        l2, l3, l4, r = self.calc(l2, l3, l4, r)
+        l2, l3, l4, r = self.calc(l1, l3, l4, r)
         if r > 0:
             l4 = ListNode(r, l4)
         return l4
