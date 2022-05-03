@@ -14,7 +14,7 @@ class Solution(object):
         """
         if self.is_palandrome(s):
             return s
-        if s in self.memoize:
+        if s in self.memoize or s[::-1] in self.memoize:
             return self.memoize[s]
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
