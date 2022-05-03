@@ -23,16 +23,17 @@ class Solution(object):
         # start left to right checking for palindromes
         for i in range(len(s)):
             # get biggest palendrome from this (i) location
+            # even palendrome check
             tmp = helper(i, i)
             # if it's bigger than already found then make that the biggest
             if len(tmp) > len(res):
                 res = tmp
-            
+            # odd palendrome check
             tmp = helper(i, i + 1)
             if len(tmp) > len(res):
                 res = tmp
         return res
-        pass
+        
 
     def attempt3(self, s):
         if s == s[::-1]: return s
