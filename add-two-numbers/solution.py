@@ -49,22 +49,28 @@ class Solution(object):
         l4 = None
         r = 0
         while True:
-            v = l3.val + l2.val
-            l3 = l3.next
-            l2 = l2.next
-            if r > 0:
-                v += r
-                if v < 10:
-                    r = 0
-            if v // 10 >= 1:
-                r = v // 10
-                v = v % 10
-            l4 = ListNode(v, l4)
+            l2, l3, l4, r = self.calc(l2, l3, l4, r)
             if not l3.next: l3 = l2
             if not l3.next: break
+        l2, l3, l4, r = self.calc(l2, l3, l4, r)
         if r > 0:
             l4 = ListNode(r, l4)
         return l4
+
+    def calc(self, l2, l3, l4, r):
+        v = l3.val + l2.val
+        l3 = l3.next
+        l2 = l2.next
+        if r > 0:
+            v += r
+            if v < 10:
+                r = 0
+        if v // 10 >= 1:
+            r = v // 10
+            v = v % 10
+        l4 = ListNode(v, l4)
+        return l2, l3, l4, r
+
 
 def test0():
     assert Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
