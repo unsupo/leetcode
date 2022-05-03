@@ -24,10 +24,11 @@ class Solution(object):
             return s
         palendrone = s[0]
         # palendrone length
-        for i in range(1,len(s)-1):
-            for j in range(len(s)//i):
-                if self.is_palindrone(s[i:i+j]):
-                    return s[i:i+j] if len(s[i:i+j]) > len(palendrone) else palendrone
+        for i in range(2, len(s) - 1):
+            for j in range(len(s) // i):
+                if self.is_palindrone(s[i:i + j]):
+                    palendrone = s[i:i + j] if len(s[i:i + j]) > len(palendrone) else palendrone
+                    break # break here, no need to find all of this length
         return palendrone
 
     def attempt2(self, s):
