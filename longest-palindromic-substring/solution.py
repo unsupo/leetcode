@@ -31,7 +31,7 @@ class Solution(object):
                 return sr
 
     def attempt2(self, s):
-        return self._attempt2(s, len(s)//2)
+        return self._attempt2(s, len(s)//2**1)
 
     def _attempt2(self, s, r):
         """
@@ -42,8 +42,8 @@ class Solution(object):
             return s
         if s in self.memoize:
             return self.memoize[s]
-        a = self.attempt2(s[r:])
-        b = self.attempt2(s[:-r])
+        a = self._attempt2(s[r:])
+        b = self._attempt2(s[:-r])
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
