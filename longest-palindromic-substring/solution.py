@@ -13,8 +13,11 @@ babad
         bab
 
 """
+
+
 class Solution(object):
     memoize = {}
+
     def _Longest_Palindromic_Substring(self, s):
         rev = s[::-1]
         if s == rev:
@@ -28,29 +31,27 @@ class Solution(object):
                 return sr
 
     def attempt2(self, s):
+        return self._attempt2(s, len(s)//2)
+
+    def _attempt2(self, s, r):
         """
         :type s: "babad"
         :rtype: "bab"
         """
-        # rev = s[::-1]
-        if self.is_palindrone(s): # .97
+        if self.is_palindrone(s):  # .97
             return s
         if s in self.memoize:
             return self.memoize[s]
-        # if rev in self.memoize:
-        #     return self.memoize[rev]
-        a = self.attempt2(s[1:])
-        b = self.attempt2(s[:-1])
-        longest = a if len(a) > len(b) else b #sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        # if len(s) != 1: # 224.3 vs 224.6
-        #     self.memoize[s] = longest
+        a = self.attempt2(s[r:])
+        b = self.attempt2(s[:-r])
+        longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
 
-    def is_palindrone(self,s):
+    def is_palindrone(self, s):
         l = len(s)
-        for i in range(l//2):
-            if s[i] != s[l-i-1]:
+        for i in range(l // 2):
+            if s[i] != s[l - i - 1]:
                 return False
         return True
 
@@ -135,5 +136,5 @@ if __name__ == '__main__':
     # test3()
     # test4()
     # test5()
-    test6() # 1.17
+    test6()  # 1.17
     # test7()
