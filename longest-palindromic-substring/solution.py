@@ -14,7 +14,11 @@ abab
 class Solution(object):
     memoize = {}
     def _Longest_Palindromic_Substring(self, s):
-        pass
+        rev = s[::-1]
+        if s == rev:
+            return s
+        sl = s[:-1]
+        sr = s[1:]
 
     def attempt2(self, s):
         """
