@@ -1,5 +1,5 @@
 class Solution(object):
-    memoize = set()
+    memoize = {}
     def _Longest_Palindromic_Substring(self, s):
         """
         :type s: "babad"
@@ -11,6 +11,8 @@ class Solution(object):
         # thrid path splits in half
         if self.is_palandrome(s):
             self.memoize.add(s)
+            return s
+        if s in self.memoize:
             return s
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
