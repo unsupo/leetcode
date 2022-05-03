@@ -12,6 +12,14 @@ class ListNode(object):
             ln = ListNode(i, ln)
         return ln
 
+    @staticmethod
+    def equals(l1, l2):
+        while l1.next:
+            if l1.val != l2.val: return False
+            if l1.next and not l2.next: return False
+            l1 = l1.next
+            l2 = l2.next
+
 
 class Solution(object):
     def _Add_Two_Numbers_list(self, l1, l2):
@@ -87,19 +95,19 @@ class Solution(object):
         return n
 
 def test0():
-    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
-                                       ListNode.to_list_node([5, 6, 4])) == ListNode.to_list_node([7, 0, 8])
+    assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([2, 4, 3]),
+                                       ListNode.to_list_node([5, 6, 4])), ListNode.to_list_node([7, 0, 8]))
 
 
 def test1():
-    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([0]), ListNode.to_list_node([0])) == ListNode.to_list_node(
-        [0])
+    assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([0]), ListNode.to_list_node([0])), ListNode.to_list_node(
+        [0]))
 
 
 def test2():
-    assert Solution()._Add_Two_Numbers(ListNode.to_list_node([9, 9, 9, 9, 9, 9, 9]),
-                                       ListNode.to_list_node([9, 9, 9, 9])) == ListNode.to_list_node(
-        [8, 9, 9, 9, 0, 0, 0, 1])
+    assert ListNode.equals(Solution()._Add_Two_Numbers(ListNode.to_list_node([9, 9, 9, 9, 9, 9, 9]),
+                                       ListNode.to_list_node([9, 9, 9, 9])), ListNode.to_list_node(
+        [8, 9, 9, 9, 0, 0, 0, 1]))
 
 
 if __name__ == '__main__':
