@@ -14,7 +14,7 @@ class Solution(object):
             if v//10 >= 1:
                 r = v//10
                 v = v%10
-            else:
+            if r > 0:
                 v += r
                 r = 0
             l5.append(v)
