@@ -4,6 +4,7 @@ class Solution(object):
         :type s: "babad"
         :rtype: "bab"
         """
+        ""
         pass
 
     def attempt1(self,s): # doesn't work if answer not in middle, no exmaple was given like this
