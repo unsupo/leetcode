@@ -47,6 +47,7 @@ class Solution(object):
     def _Add_Two_Numbers(self, l1, l2):
         l3 = l1
         l4 = None
+        r = 0
         while l3.next:
             v = l1.val + l2.val
             l1 = l1.next
