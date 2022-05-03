@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: 2.00000
         """
         nums3 = nums1.extend(nums2)
-        return len(nums3)%2
+        return nums3[len(nums3)] if len(nums3)%2==1
 
         
 def test0():
