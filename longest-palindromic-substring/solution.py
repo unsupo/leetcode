@@ -47,6 +47,12 @@ class Solution(object):
         self.memoize[s] = longest
         return longest
 
+    def is_palindrone(self,s):
+        for i in range(len(s)):
+            if s[i] != s[-i]:
+                return False
+        return True
+
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
         if s == s[::-1]:
             return s
@@ -122,11 +128,12 @@ def test7():
 
 
 if __name__ == '__main__':
+    print(Solution().is_palindrone("gykrkyg"))
     # test0()
     # test1()
     # test2()
     # test3()
     # test4()
     # test5()
-    test6()
+    # test6()
     # test7()
