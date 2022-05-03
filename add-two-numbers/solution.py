@@ -54,8 +54,12 @@ class Solution(object):
             l5.append(r)
         return l5
 
-    def convert_listnode_to_list(self, listNode) -> []:
-        
+    def convert_listnode_to_list(self, listNode: ListNode) -> []:
+        r = []
+        while listNode:
+            r.append(listNode.val)
+            listNode = listNode.next
+        return r
 
     def _Add_Two_Numbers(self, l1, l2):
         l3 = l1
