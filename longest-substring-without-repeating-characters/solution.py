@@ -5,8 +5,9 @@ class Solution(object):
         :rtype: 3
         """
         longest = 0
-        seen = set()
-        for i in s:
+        seen = []
+        for i in range(len(s)):
+            seen.add(set())
             if i in seen:
                 if len(seen) > longest:
                     longest = len(seen)
