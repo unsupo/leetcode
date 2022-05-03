@@ -33,7 +33,7 @@ class Solution(object):
         :rtype: "bab"
         """
         # rev = s[::-1]
-        if self.is_palindrone(s):
+        if self.is_palindrone(s): # .97
             return s
         if s in self.memoize:
             return self.memoize[s]
