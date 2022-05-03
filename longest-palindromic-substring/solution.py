@@ -17,12 +17,13 @@ class Solution(object):
         rev = s[::-1]
         if s == rev:
             return s
-        sl = s[:-1]
-        if sl == sl[::-1]:
-            return sl
-        sr = s[1:]
-        if sr == sr[::-1]:
-            return sr
+        for i in range(len(s)):
+            sl = s[:-1]
+            if sl == sl[::-1]:
+                return sl
+            sr = s[1:]
+            if sr == sr[::-1]:
+                return sr
 
     def attempt2(self, s):
         """
