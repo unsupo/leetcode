@@ -39,8 +39,6 @@ class Solution(object):
                 v = s[j:i + j]
                 if self.is_palindrone(v):
                     return v
-                    # palendrone = v if len(v) > len(palendrone) else palendrone
-                    # break  # break here, no need to find all of this length
         return palendrone
 
     def attempt2(self, s):
