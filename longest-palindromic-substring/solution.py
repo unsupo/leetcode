@@ -22,11 +22,13 @@ class Solution(object):
         # assume 1 exists then move up to two until you don't find a palendrone
         if self.is_palindrone(s):  # .97
             return s
-        for i in range(len(s)-1):
+        palendrone = s[0]
+        # palendrone length
+        for i in range(1,len(s)-1):
             for j in range(len(s)//i):
                 if self.is_palindrone(s[i:i+j]):
-                    return s[i:i+j]
-        return s[0]
+                    return s[i:i+j] if len(s[i:i+j]) > len(palendrone) else palendrone
+        return palendrone
 
     def attempt2(self, s):
         """
