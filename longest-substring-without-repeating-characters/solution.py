@@ -4,11 +4,15 @@ class Solution(object):
         :type s: "abcabcbb"
         :rtype: 3
         """
-        l=""
+        longest = 0
+        seen = set()
         for i in s:
-            
-        # Have solution here and remove pass
-        pass
+            if i in seen:
+                if len(seen) > longest:
+                    longest = len(seen)
+                seen = set()
+            seen.add(i)
+        return longest
 
         
 def test0():
