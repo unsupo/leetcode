@@ -22,7 +22,9 @@ class Solution(object):
         a = self._Longest_Palindromic_Substring(s[1:])
         b = self._Longest_Palindromic_Substring(s[:-1])
         longest = a if len(a) > len(b) else b  # sorted([a, b], key=lambda x: len(x), reverse=True)[0]
-        self.memoize[s] = longest
+        rev = longest[::-1]
+        if rev not in self.memoize:
+            self.memoize[s] = longest
         return longest
 
     def attempt1(self, s):  # doesn't work if answer not in middle, no exmaple was given like this
