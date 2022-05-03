@@ -5,10 +5,11 @@ class Solution(object):
         :type l2: [5,6,4]
         :rtype: [7,0,8]
         """
-        l1[::-1]
-        # Have solution here and remove pass
-        pass
-
+        l3 = l1[::-1]
+        l4 = l2[::-1]
+        r = 0
+        for i in range(len(l3)):
+            
         
 def test0():
     assert Solution()._Add_Two_Numbers([2,4,3], [5,6,4]) == [7,0,8]
