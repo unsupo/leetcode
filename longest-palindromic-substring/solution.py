@@ -6,8 +6,10 @@ from time import time
 
 class Solution(object):
     memoize = {}
-
     def _Longest_Palindromic_Substring(self, s):
+        pass
+
+    def attempt2(self, s):
         """
         :type s: "babad"
         :rtype: "bab"
@@ -19,12 +21,9 @@ class Solution(object):
             return self.memoize[s]
         if rev in self.memoize:
             return self.memoize[rev]
-        a = self._Longest_Palindromic_Substring(s[len(s)//2:])
-        b = self._Longest_Palindromic_Substring(s[:-len(s)//2])
-        # c = self._Longest_Palindromic_Substring(s[1:])
-        # d = self._Longest_Palindromic_Substring(s[:-1])
-        # a if len(a) > len(b) else b  #
-        longest = sorted([a, b], key=lambda x: len(x), reverse=True)[0]
+        a = self._Longest_Palindromic_Substring(s[1:])
+        b = self._Longest_Palindromic_Substring(s[:-1])
+        longest = a if len(a) > len(b) else b #sorted([a, b], key=lambda x: len(x), reverse=True)[0]
         self.memoize[s] = longest
         return longest
 
