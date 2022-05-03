@@ -12,6 +12,8 @@ class Solution(object):
                     longest = len(seen)
                 seen = set()
             seen.add(i)
+        if len(seen) > longest:
+            longest = len(seen)
         return longest
 
 
