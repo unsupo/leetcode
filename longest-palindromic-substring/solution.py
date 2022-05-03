@@ -12,7 +12,7 @@ class Solution(object):
                 return s[i:l]  # can be done better
             if s[:-i] == s[:-i][::-1]:
                 return s[:-i]  # can be done better
-        return None  # length of 0 only?
+        return None
 
 
 def test0():
