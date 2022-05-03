@@ -4,6 +4,9 @@ class Solution(object):
         :type s: "abcabcbb"
         :rtype: 3
         """
+        l=""
+        for i in s:
+            
         # Have solution here and remove pass
         pass
 
