@@ -12,9 +12,9 @@ class Solution(object):
                 return s[i:l]
             if s[:-i] == s[:-i][::-1]:
                 return s[:-i]
-            if s[i:-i] == s[i:-i][::-1]:
+            if len(s[i:-i]) > 1 and s[i:-i] == s[i:-i][::-1]:
                 return s[i:-i]
-        return None
+        return s[0]
 
 
 def test0():
