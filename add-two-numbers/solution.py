@@ -11,12 +11,12 @@ class Solution(object):
         r = 0
         for i in range(len(l1)):
             v = l1[i]+l2[i]
-            if v//10 >= 1:
-                r = v//10
-                v = v%10
             if r > 0:
                 v += r
                 r = 0
+            if v//10 >= 1:
+                r = v//10
+                v = v%10
             l5.append(v)
 
 def test0():
