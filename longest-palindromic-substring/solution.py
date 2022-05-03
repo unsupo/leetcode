@@ -48,10 +48,11 @@ def test2():
 
 
 def test3():
-    assert Solution()._Longest_Palindromic_Substring("aacabdkacaa") == "aca"
+    assert Solution()._Longest_Palindromic_Substring("xaabacxcabaaxcabaax") == "aca"
 
 
 if __name__ == '__main__':
+    print(Solution()._Longest_Palindromic_Substring("xaabacxcabaaxcabaax"))
     test0()
     test1()
     test2()
