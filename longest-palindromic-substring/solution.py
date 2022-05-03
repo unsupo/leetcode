@@ -8,7 +8,7 @@ class Solution(object):
             return s
         l = []
         for i in s:
-            
+
 
         
 def test0():
