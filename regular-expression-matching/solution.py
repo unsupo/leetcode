@@ -19,15 +19,15 @@ class Solution(object):
         return True
 
 def test0():
-    assert Solution()._Regular_Expression_Matching("aa", "a") == false
+    assert Solution()._Regular_Expression_Matching("aa", "a") == False
 
 
 def test1():
-    assert Solution()._Regular_Expression_Matching("aa", "a\*") == true
+    assert Solution()._Regular_Expression_Matching("aa", "a*") == True
 
 
 def test2():
-    assert Solution()._Regular_Expression_Matching("ab", ".\*") == true
+    assert Solution()._Regular_Expression_Matching("ab", ".*") == True
 
 
 if __name__ == '__main__':
