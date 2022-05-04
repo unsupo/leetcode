@@ -8,8 +8,10 @@ class Solution(object):
         xx = str(x)
         l=len(xx)//2
         r=len(xx)//2
-        
+        if l+r < len(x):
+            r+=1
         while True:
+            
 
         
 def test0():
