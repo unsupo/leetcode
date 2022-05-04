@@ -19,7 +19,6 @@ class Solution(object):
                     r = expand_char
                     j += 1
                 else:
-                    j += 1
                     r = p[j]
             if s[i] != r:
                 return False
