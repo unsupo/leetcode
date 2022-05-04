@@ -14,7 +14,7 @@ class Solution(object):
         while i < len(p):
             if p[i+1] == "*":
                 groups.append(g)
-                groups.append(p[i:i + 1])
+                groups.append(p[i:i + 2])
                 g = ""
                 i += 1
             g += p[i]
