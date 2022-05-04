@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: 42
         """
         s = s.strip()
-        if s[0] in ('+','-')and s[1] in ('+','-'): return 0
+        if s[0] in ('+', '-') and s[1] in ('+', '-'): return 0
         if s[0] == '+': s = s[1:]
         num = ""
         for i in range(len(s)):
@@ -44,6 +44,10 @@ def test5():
     assert Solution()._String_to_Integer_atoi("-+12") == 0
 
 
+def test6():
+    assert Solution()._String_to_Integer_atoi("") == 0
+
+
 if __name__ == '__main__':
     test0()
     test1()
@@ -51,3 +55,4 @@ if __name__ == '__main__':
     test3()
     test4()
     test5()
+    test6()
