@@ -20,10 +20,11 @@ def test2():
     assert Solution()._Reverse_Integer(120) == 21
 
 def test3():
-    assert Solution()._Reverse_Integer(1534236469) == 21
+    assert Solution()._Reverse_Integer(1534236469) == 9646324351
 
 
 if __name__ == '__main__':
     test0()
     test1()
     test2()
+    test3()
