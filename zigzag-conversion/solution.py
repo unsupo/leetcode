@@ -7,11 +7,11 @@ class Solution(object):
         """
         rows = ["" for i in range(numRows)]
         r = 0  # current row to add things to
-        sr = numRows - 2  # sliding rows to fill the gaps
+        sr = numRows - 1  # sliding rows to fill the gaps
         for i in range(len(s)):
             if r >= numRows:
                 r = 0
-                for j in reversed(range(sr)):
+                for j in reversed(range(1, sr)):
                     rows[j] += s[i]
                     i += 1
             rows[r] += s[i]
