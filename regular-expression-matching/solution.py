@@ -25,8 +25,9 @@ class Solution(object):
                 if r == '.':
                     r = s[i]
             else:
-                j+=1
-                r=p[j]
+                j += 1
+                r = p[j]
+                expand_char = r
         return True
 
 
