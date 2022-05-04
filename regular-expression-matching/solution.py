@@ -13,7 +13,7 @@ class Solution(object):
         for i in range(len(p)):
             if p[i] == "*":
                 groups.append(g)
-                groups.append(p[i-1:i])
+                groups.append(p[i-1:i+1])
                 g = ""
             g += p[i]
         # now i have groups like asdf, a*, b*, .* ect
