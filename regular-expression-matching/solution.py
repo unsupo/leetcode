@@ -12,9 +12,9 @@ class Solution(object):
         g = ""  # i'll assume i can't split here since i can't use re
         i = 0
         while i < len(p):
-            if p[i] == "*":
+            if p[i+1] == "*":
                 groups.append(g)
-                groups.append(p[i - 1:i + 1])
+                groups.append(p[i:i + 1])
                 g = ""
                 i += 1
             g += p[i]
