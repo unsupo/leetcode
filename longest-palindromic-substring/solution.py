@@ -8,18 +8,27 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
-        largest=s[0]
-        for i in range(len(s)):
-            l = i
-            r = i
+        def get_largest_palindrome(s, l, r):
+            largest = s[0]
             while True:
-                l -= 1 # babad -> 0 is b
+                l -= 1  # babad -> 0 is b
                 r += 1
                 # don't go out of bounds and make sure it's still a palendrome
                 if r >= len(s) or l < 0 or s[r] != s[l]:
                     break
-            if len(s[l+1:r]) > len(largest):
-                largest = s[l+1:r]
+            if len(s[l + 1:r]) > len(largest):
+                largest = s[l + 1:r]
+            return largest
+
+        largest = s[0]
+        for i in range(len(s)):
+            # get the odd palindromes
+            odd = get_largest_palindrome(s, i, i)
+            # get the even palindromes
+            even = get_largest_palindrome(s, i, i - 1)
+            bigger = odd if len(odd) > len(even) else even
+            if len(bigger) > largest:
+                largest = bigger
         return largest
 
     def attempt4(self, s):
