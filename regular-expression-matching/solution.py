@@ -18,21 +18,9 @@ class Solution(object):
             if s[i] != r:
                 j+=1
                 r = p[j]
+                if r == '.':
+                    r = s[i]
             if s[i] != r:
-                return False
-
-
-            if j < len(p):
-            if expand:
-                r = expand_char
-
-            if i >= len(p) and not expand: return False
-            if i < len(p) and p[i] != '*':
-                expand_char = p[i]
-                expand = False
-            else:
-                expand = True
-            if not ((i < len(p) and s[i] == p[i]) or (expand and s[i] == expand_char or expand_char == '.')):
                 return False
         return True
 
@@ -58,10 +46,10 @@ def tester(a, b, r):
 
 
 if __name__ == '__main__':
-    test0()
-    test1()
-    test2()
+    # test0()
+    # test1()
+    # test2()
     test3()
-    [tester(*i) for i in [
-        ["rasdfew", "r.*", True]
-    ]]
+    # [tester(*i) for i in [
+    #     ["rasdfew", "r.*", True]
+    # ]]
