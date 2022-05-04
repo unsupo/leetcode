@@ -31,6 +31,8 @@ class Solution(object):
                 j += 1
                 expand_char = r
                 expand = True
+                if j >= len(p):
+                    return False
                 r = p[j]
         return True
 
