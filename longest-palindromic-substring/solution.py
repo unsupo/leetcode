@@ -17,7 +17,7 @@ class Solution(object):
                    break
 
 
-        pass
+        
 
 
     def attempt4(self, s):
