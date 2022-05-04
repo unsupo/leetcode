@@ -11,12 +11,19 @@ class Solution(object):
         j=0
         r=expand_char
         for i in range(len(s)):
-            if j < len(p):
-                r = p[j]
             if expand:
                 r = expand_char
+                if r == '.':
+                    r = s[i]
             if s[i] != r:
                 return False
+            
+
+            if j < len(p):
+                r = p[j]
+                j+=1
+            if expand:
+                r = expand_char
 
             if i >= len(p) and not expand: return False
             if i < len(p) and p[i] != '*':
