@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: 321
         """
         xx = str(x)
-        return "-" + xx[1::-1] if xx[0] == '-' else xx[::-1]
+        return int("-" + xx[1::-1] if xx[0] == '-' else xx[::-1])
 
 
 def test0():
