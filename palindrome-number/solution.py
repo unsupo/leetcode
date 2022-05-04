@@ -10,10 +10,9 @@ class Solution(object):
         r=len(xx)//2
         if l+r < len(x):
             r+=1
-        while True:
-            if l < 0 or r > len(xx):
+        while l >= 0 and r < len(xx):
                 break
-            
+
 
         
 def test0():
