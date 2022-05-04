@@ -6,7 +6,9 @@ class Solution(object):
         """
         if x > 2**31 - 1 or x < -2**31: return 0
         xx = str(x)
-        return int("-" + xx[:-len(xx):-1] if xx[0] == '-' else xx[::-1])
+        r = int("-" + xx[:-len(xx):-1] if xx[0] == '-' else xx[::-1])
+        if r > 2**31 - 1 or r < -2**31: return 0
+        return r
 
 
 def test0():
