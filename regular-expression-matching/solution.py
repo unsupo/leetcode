@@ -26,8 +26,8 @@ class Solution(object):
                     r = s[i]
             else:
                 j += 1
-                r = p[j]
                 expand_char = r
+                r = p[j]
         return True
 
 
