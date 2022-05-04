@@ -61,5 +61,7 @@ if __name__ == '__main__':
         ["adsfdsfa", "a.*a", True],
         ["adsfdsf", "a.*a", False],
         ["dsfdsfa", "a.*a", False],
-        ["dsfdsfa", "a.*a.*", False]
+        ["adfsjlkadfsklj", "a.*a.*", True],
+        ["dfsjlkadfsklj", "a.*a.*", False],
+        ["adfsjlkdfsklj", "a.*a.*", False]
     ]]
