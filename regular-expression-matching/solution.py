@@ -9,7 +9,7 @@ class Solution(object):
         if not p or p[0] == "*": return False
         # attempt to split by * call these groups
         groups = []
-        g = ""
+        g = "" # i'll assume i can't split here since i can't use re
         for i in p:
             if i == "*":
                 g += "*"
