@@ -14,8 +14,9 @@ class Solution(object):
                 expand = False
             else:
                 expand = True
-            if s[i] == 
-
+            if not ((i < len(p) and s[i] == p[i]) or (expand and s[i] == expand_char or expand_char == '.')):
+                return False
+        return True
 
 def test0():
     assert Solution()._Regular_Expression_Matching("aa", "a") == false
