@@ -26,7 +26,7 @@ def test3():
 
 
 def test4():
-    assert Solution()._Reverse_Integer(1534236469) == 0
+    assert Solution()._Reverse_Integer(900000) == 9
 
 
 if __name__ == '__main__':
