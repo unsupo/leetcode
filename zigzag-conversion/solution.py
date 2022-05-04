@@ -5,8 +5,8 @@ class Solution(object):
         :type numRows: 3
         :rtype: "PAHNAPLSIIGYIR"
         """
-        # Have solution here and remove pass
-        pass
+        for i in range(len(s)):
+            
 
         
 def test0():
