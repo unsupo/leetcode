@@ -15,9 +15,12 @@ class Solution(object):
             if s[i] != r:
                 if r == '.':
                     r = s[i]
-                if r == '*':
+                elif r == '*':
                     r = expand_char
                     j += 1
+                else:
+                    j += 1
+                    r = p[j]
             if s[i] != r:
                 return False
             if expand:
