@@ -76,7 +76,11 @@ if it was a palendrome.
 Why not avoid the second loop and instead loop over the whole string
 and loop until you find the largest palendrome?
 
-That was the next soluiton, hoping to get `O(n^2)`
+That was the next solution, hoping to get `O(n^2)` with this method.
+
+The only caviot is we need to check for odd and even palindromes, so we
+have to run the check twice.
+
 
 
 
