@@ -16,12 +16,13 @@ class Solution(object):
                 if r == '.':
                     r = s[i]
             if s[i] != r:
+                j+=1
+                r = p[j]
+            if s[i] != r:
                 return False
-            
+
 
             if j < len(p):
-                r = p[j]
-                j+=1
             if expand:
                 r = expand_char
 
