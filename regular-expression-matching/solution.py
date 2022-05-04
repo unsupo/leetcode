@@ -5,7 +5,9 @@ class Solution(object):
         :type p: "a"
         :rtype: false
         """
-        
+        for i in s:
+            for j in p:
+                
 
         
 def test0():
