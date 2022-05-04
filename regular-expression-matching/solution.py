@@ -16,7 +16,7 @@ class Solution(object):
                 groups.append(g)
                 groups.append(p[i:i + 2])
                 g = ""
-                i += 1
+                i += 2
             g += p[i]
             i += 1
         # now i have groups like asdf, a*, b*, .* ect
