@@ -12,7 +12,7 @@ class Solution(object):
         j = 0
         r = p[0]
         for i in range(len(s)):
-            if r != '.' and s[i] != r:
+            if r != '.' and s[i] != r: # need to also look to the next character here
                 if r == '*':
                     r = expand_char
                     expand = True
