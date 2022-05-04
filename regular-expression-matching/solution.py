@@ -13,16 +13,14 @@ class Solution(object):
         r = p[0]
         for i in range(len(s)):
             if s[i] != r:
-                if r == '.':
-                    r = s[i]
-                elif r == '*':
+                if r == '*':
                     r = expand_char
                     expand = True
                     j += 1
                 else:
                     r = p[j]
                     expand_char = r
-            if s[i] != r:
+            if r != '.' and s[i] != r:
                 return False
             if expand:
                 r = expand_char
