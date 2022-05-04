@@ -12,10 +12,10 @@ class Solution(object):
         g = "" # i'll assume i can't split here since i can't use re
         for i in p:
             if i == "*":
-                g += "*"
+                g += i
                 groups.append(g)
                 g = ""
-            g += p[i]
+            g += i
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         # if true move to the next group
