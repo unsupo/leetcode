@@ -6,31 +6,30 @@ class Solution(object):
         """
         if x < 0: return False
         xx = str(x)
-        l=len(xx)//2
-        r=len(xx)//2
-        if l+r < len(xx):
-            r+=1
+        l = len(xx) // 2
+        r = len(xx) // 2
+        if l + r < len(xx):
+            r += 1
         while l >= 0 and r < len(xx):
             if xx[l] != xx[r]:
                 return False
-            l-=1
-            r+=1
+            l -= 1
+            r += 1
         return True
 
 
-        
 def test0():
     assert Solution()._Palindrome_Number(121) == True
 
-            
+
 def test1():
     assert Solution()._Palindrome_Number(-121) == False
 
-            
+
 def test2():
     assert Solution()._Palindrome_Number(10) == False
 
-            
+
 if __name__ == '__main__':
     test0()
     test1()
