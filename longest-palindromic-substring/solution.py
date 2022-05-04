@@ -8,31 +8,7 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
-        # expand from center
-        def helper(l, r):
-            # if left is in bounds, and r is in bounds
-            # and left value equals right value then keep going
-            # making a bigger and bigger palendrone
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                l -= 1 # move left over
-                r += 1 # move right over
-            # return palendrome which is between left and right none inclusive
-            return s[l + 1:r]
-
-        res = ""
-        # start left to right checking for palindromes
-        for i in range(len(s)):
-            # get biggest palendrome from this (i) location
-            # even palendrome check
-            tmp = helper(i, i)
-            # if it's bigger than already found then make that the biggest
-            if len(tmp) > len(res):
-                res = tmp
-            # odd palendrome check
-            tmp = helper(i, i + 1)
-            if len(tmp) > len(res):
-                res = tmp
-        return res
+        pass
 
 
     def attempt3(self, s):
