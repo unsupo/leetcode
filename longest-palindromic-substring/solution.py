@@ -7,8 +7,10 @@ from time import time
 class Solution(object):
     memoize = {}
 
-    # def _Longest_Palindromic_Substring(self, s):
-    #     pass
+    def _Longest_Palindromic_Substring(self, s):
+        
+
+        pass
 
 
     def attempt4(self, s):
