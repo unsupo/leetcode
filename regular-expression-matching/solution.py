@@ -16,6 +16,9 @@ class Solution(object):
                 r = expand_char
                 if r == '.':
                     r = s[i]
+            else:
+                j+=1
+                r=p[j]
             if s[i] != r:
                 j += 1
                 r = p[j]
