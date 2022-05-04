@@ -6,6 +6,11 @@ class Solution(object):
         :rtype: false
         """
         if p == '.*': return True
+        if not p or p == "*": return False
+        # attempt to split by *
+
+    def attempt1(self, s, p):
+        if p == '.*': return True
         if not p: return False
         expand = False
         expand_char = ""
