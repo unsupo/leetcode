@@ -4,7 +4,7 @@ class Solution(object):
         :type x: 123
         :rtype: 321
         """
-        if x > 231 - 1 or x < -231: return 0
+        if x > 2**31 - 1 or x < -2**31: return 0
         xx = str(x)
         return int("-" + xx[:-len(xx):-1] if xx[0] == '-' else xx[::-1])
 
