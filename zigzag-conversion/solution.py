@@ -16,7 +16,6 @@ class Solution(object):
                     i += 1
             rows[r] += s[i]
             r += 1
-            # 3,1-4,2-5,3
         return ''.join(rows)
 
 
