@@ -33,7 +33,7 @@ class Solution(object):
             if len(tmp) > len(res):
                 res = tmp
         return res
-        
+
 
     def attempt3(self, s):
         if s == s[::-1]: return s
