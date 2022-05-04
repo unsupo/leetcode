@@ -8,7 +8,9 @@ class Solution(object):
         if len(s) == 0 or (len(s) > 1 and s[0] in ('+', '-') and s[1] in ('+', '-')): return 0
         if s[0] == '+': s = s[1:]
         neg=''
-        if s[0] == '-': n = '-'
+        if s[0] == '-':
+            neg = '-'
+            s = s[1:]
         num = ""
         for i in range(len(s)):
             if s[i] not in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
