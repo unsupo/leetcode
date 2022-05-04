@@ -11,7 +11,7 @@ class Solution(object):
     #     pass
 
 
-    def _Longest_Palindromic_Substring(self, s):
+    def attempt4(self, s):
         if self.is_palindrone(s): return s
         l = ''
         v = 0
@@ -29,7 +29,7 @@ class Solution(object):
                         l = ss
         return l
 
-    def attempt4(self, s):
+    def _Longest_Palindromic_Substring(self, s):
         # assume 1 exists then move up to two until you don't find a palendrone
         if self.is_palindrone(s):  # .97
             return s
@@ -205,4 +205,6 @@ func:'test8' args:[(), {}] took: 0.0000 sec
 func:'test9' args:[(), {}] took: 0.0334 sec
 func:'test10' args:[(), {}] took: 0.1745 sec
 func:'run_tests' args:[(), {}] took: 0.7485 sec
+
+
 """
