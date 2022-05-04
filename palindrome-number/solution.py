@@ -8,7 +8,7 @@ class Solution(object):
         xx = str(x)
         l=len(xx)//2
         r=len(xx)//2
-        if l+r < len(x):
+        if l+r < len(xx):
             r+=1
         while l >= 0 and r < len(xx):
             if xx[l] != xx[r]:
