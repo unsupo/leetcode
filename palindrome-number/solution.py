@@ -6,7 +6,7 @@ class Solution(object):
         """
         if x < 0: return False
         xx = str(x)
-        l = len(xx) // 2
+        l = len(xx) // 2 - 1
         r = len(xx) // 2
         if l + r < len(xx):
             r += 1
