@@ -7,9 +7,12 @@ class Solution(object):
         """
         rows = ["" for i in range(numRows)]
         r = 0  # current row to add things to
-        sr = 0  # sliding rows to fill the gaps
+        sr = numRows - 1  # sliding rows to fill the gaps
         for i in range(len(s)):
-            if r >= numRows: r = 0
+            if r >= numRows:
+                r = 0
+                for j in reversed(range(len(sr))):
+                    rows[j] += 
             rows[r] += s[i]
             r += 1
             # 3,1-4,2-5,3
