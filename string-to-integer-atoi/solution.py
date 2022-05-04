@@ -4,8 +4,12 @@ class Solution(object):
         :type s: "42"
         :rtype: 42
         """
-        # Have solution here and remove pass
-        pass
+        num=""
+        start=False
+        for i in range(len(s)):
+            if s[i] in ():
+                start = True
+            
 
         
 def test0():
