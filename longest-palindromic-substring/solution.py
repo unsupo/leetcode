@@ -8,7 +8,8 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
-        
+        for i in s:
+            
 
         pass
 
