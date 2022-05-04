@@ -27,7 +27,7 @@ class Solution(object):
             # get the even palindromes
             even = get_largest_palindrome(s, i, i - 1)
             bigger = odd if len(odd) > len(even) else even
-            if len(bigger) > largest:
+            if len(bigger) > len(largest):
                 largest = bigger
         return largest
 
