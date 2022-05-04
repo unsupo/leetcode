@@ -6,24 +6,23 @@ class Solution(object):
         :rtype: "PAHNAPLSIIGYIR"
         """
         rows = [[] for i in range(numRows)]
-        r=0
+        r = 0
         for i in range(len(s)):
-                
-            pass # 3,1-4,2-5,3
+            pass  # 3,1-4,2-5,3
 
-        
+
 def test0():
     assert Solution()._Zigzag_Conversion("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
 
-            
+
 def test1():
     assert Solution()._Zigzag_Conversion("PAYPALISHIRING", 4) == "PINALSIGYAHRPI"
 
-            
+
 def test2():
     assert Solution()._Zigzag_Conversion("A", 1) == "A"
 
-            
+
 if __name__ == '__main__':
     test0()
     test1()
