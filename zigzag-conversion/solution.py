@@ -12,7 +12,8 @@ class Solution(object):
             if r >= numRows:
                 r = 0
                 for j in reversed(range(len(sr))):
-                    rows[j] += 
+                    rows[j] += s[i]
+                    i += 1
             rows[r] += s[i]
             r += 1
             # 3,1-4,2-5,3
