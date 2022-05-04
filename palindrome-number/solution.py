@@ -8,6 +8,7 @@ class Solution(object):
         xx = str(x)
         l=len(xx)//2
         r=len(xx)//2
+        
         while True:
 
         
