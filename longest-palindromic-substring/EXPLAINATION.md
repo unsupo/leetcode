@@ -69,6 +69,15 @@ return palendrone
 
 ## Solution
 Now was the time to analyze the results i've seen up to this point.
+All the solution were `O(n^3)` because they had to loop over the
+whole string, loop over all the substrings, and perform a loop to see 
+if it was a palendrome.
+
+Why not avoid the second loop and instead loop over the whole string
+and loop until you find the largest palendrome?
+
+That was the next soluiton, hoping to get `O(n^2)`
+
 
 
 ```python
