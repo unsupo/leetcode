@@ -9,9 +9,8 @@ class Solution(object):
         expand = False
         expand_char = ""
         for i in range(len(s)):
-            if i >= len(p):
-                if not expand: return False
-            if p[i] != '*':
+            if i >= len(p) and not expand: return False
+            if i < len(p) and p[i] != '*':
                 expand_char = p[i]
                 expand = False
             else:
