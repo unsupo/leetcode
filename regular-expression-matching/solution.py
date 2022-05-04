@@ -45,5 +45,6 @@ if __name__ == '__main__':
     test1()
     test2()
     [tester(*i) for i in [
-        ["rasdfew", "r.*", True]
+        ["rasdfew", "r.*", True],
+        ["rrraaaa", "r*a*", True]
     ]]
