@@ -31,7 +31,7 @@ def test2():
 
 
 def test3():
-    assert Solution()._String_to_Integer_atoi("4193 with words") == 4193
+    assert Solution()._String_to_Integer_atoi("words and 987") == 0
 
 
 if __name__ == '__main__':
