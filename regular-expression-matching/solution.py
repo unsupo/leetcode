@@ -6,8 +6,9 @@ class Solution(object):
         :rtype: false
         """
         if p == '.*': return True
-        for i in s:
+        for i in range(len(s)):
             
+
 
         
 def test0():
