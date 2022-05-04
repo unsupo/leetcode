@@ -9,9 +9,11 @@ class Solution(object):
 
     def _Longest_Palindromic_Substring(self, s):
         for i in range(len(s)):
-            j=0
+            l=i
+            r=i
             while True:
-                
+               
+               if j>len(s) or -
 
         pass
 
