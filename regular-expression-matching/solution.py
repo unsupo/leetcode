@@ -5,8 +5,7 @@ class Solution(object):
         :type p: "a"
         :rtype: false
         """
-        # Have solution here and remove pass
-        pass
+        
 
         
 def test0():
