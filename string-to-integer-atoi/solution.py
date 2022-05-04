@@ -36,7 +36,7 @@ def test3():
 
 
 def test4():
-    assert Solution()._String_to_Integer_atoi("+-12") == -12
+    assert Solution()._String_to_Integer_atoi("+-12") == 0
 
 
 if __name__ == '__main__':
