@@ -19,6 +19,9 @@ def test1():
 def test2():
     assert Solution()._Reverse_Integer(120) == 21
 
+def test3():
+    assert Solution()._Reverse_Integer(1534236469) == 21
+
 
 if __name__ == '__main__':
     test0()
