@@ -5,13 +5,13 @@ class Solution(object):
         :type numRows: 3
         :rtype: "PAHNAPLSIIGYIR"
         """
-        rows = [[] for i in range(numRows)]
-        r = 0 # current row to add things to
-        sr = 0 # sliding rows to fill the gaps
+        rows = ["" for i in range(numRows)]
+        r = 0  # current row to add things to
+        sr = 0  # sliding rows to fill the gaps
         for i in range(len(s)):
             if r >= numRows: r = 0
-            
-            r+=1
+            rows[r] += s[i]
+            r += 1
             # 3,1-4,2-5,3
 
 
