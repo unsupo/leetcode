@@ -59,5 +59,6 @@ if __name__ == '__main__':
     [tester(*i) for i in [
         ["rasdfew", "r.*", True],
         ["adsfdsfa", "a.*a", True],
-        ["adsfdsf", "a.*a", False]
+        ["adsfdsf", "a.*a", False],
+        ["dsfdsfa", "a.*a", False]
     ]]
