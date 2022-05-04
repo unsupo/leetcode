@@ -48,6 +48,18 @@ def test6():
     assert Solution()._String_to_Integer_atoi("") == 0
 
 
+def test7():
+    assert Solution()._String_to_Integer_atoi("+") == 0
+
+
+def test8():
+    assert Solution()._String_to_Integer_atoi("-") == 0
+
+
+def test9():
+    assert Solution()._String_to_Integer_atoi("-+") == 0
+
+
 if __name__ == '__main__':
     test0()
     test1()
@@ -56,3 +68,6 @@ if __name__ == '__main__':
     test4()
     test5()
     test6()
+    test7()
+    test8()
+    test9()
