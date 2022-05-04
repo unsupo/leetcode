@@ -7,9 +7,12 @@ class Solution(object):
         num=""
         start=False
         for i in range(len(s)):
-            if s[i] in ():
+            if s[i] in ('-',''):
                 start = True
-            
+            elif start:
+                break
+            if start: num+=s[i]
+        return int(num)
 
         
 def test0():
