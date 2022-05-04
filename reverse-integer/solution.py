@@ -4,6 +4,7 @@ class Solution(object):
         :type x: 123
         :rtype: 321
         """
+        if x > 231 - 1 or x < -231: return 0
         xx = str(x)
         return int("-" + xx[:-len(xx):-1] if xx[0] == '-' else xx[::-1])
 
@@ -19,8 +20,9 @@ def test1():
 def test2():
     assert Solution()._Reverse_Integer(120) == 21
 
+
 def test3():
-    assert Solution()._Reverse_Integer(1534236469) == 9646324351
+    assert Solution()._Reverse_Integer(1534236469) == 0
 
 
 if __name__ == '__main__':
