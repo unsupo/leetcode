@@ -8,18 +8,21 @@ class Solution(object):
         if p == '.*': return True
         expand = False
         expand_char = ""
-        j=0
-        r=expand_char
+        j = 0
+        r = expand_char
         for i in range(len(s)):
             if expand:
                 r = expand_char
                 if r == '.':
                     r = s[i]
             if s[i] != r:
-                j+=1
+                j += 1
                 r = p[j]
                 if r == '.':
                     r = s[i]
+                if r == '*':
+                    r = expand_char
+                    j += 1
             if s[i] != r:
                 return False
         return True
