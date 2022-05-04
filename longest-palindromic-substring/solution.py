@@ -13,7 +13,7 @@ class Solution(object):
             l = i
             r = i
             while True:
-                l -= 1
+                l -= 1 # babad -> 0 is b
                 r += 1
                 # don't go out of bounds and make sure it's still a palendrome
                 if r > len(s) or l < 0 or s[r] != s[l]:
