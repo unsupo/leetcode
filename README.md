@@ -18,4 +18,4 @@ This makes it easy to test locally and add notes if needed.
 ## Bugs
 - zigzag-conversion failed because of carets 2^31
 - string-to-integer-atoi failed because of multi line explanation
-- 
+- python true and false should not be lower case

@@ -4,8 +4,7 @@ class Solution(object):
         :type x: 121
         :rtype: true
         """
-        # Have solution here and remove pass
-        pass
+        xx = str(x)
 
         
 def test0():
