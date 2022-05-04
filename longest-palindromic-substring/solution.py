@@ -8,17 +8,19 @@ class Solution(object):
     memoize = {}
 
     def _Longest_Palindromic_Substring(self, s):
+        largest=s[0]
         for i in range(len(s)):
-            l=i; r=i
+            l = i
+            r = i
             while True:
-               l-=1; r+=1
-               # don't go out of bounds and make sure it's still a palendrome
-               if r>len(s) or l<0 or s[r] != s[l]:
-                   break
-
-
-        
-
+                l -= 1
+                r += 1
+                # don't go out of bounds and make sure it's still a palendrome
+                if r > len(s) or l < 0 or s[r] != s[l]:
+                    break
+            if len(s[r:l]) > len(largest):
+                largest = s[r:l]
+        return largest
 
     def attempt4(self, s):
         if self.is_palindrone(s): return s
