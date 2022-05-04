@@ -18,8 +18,8 @@ class Solution(object):
                 # don't go out of bounds and make sure it's still a palendrome
                 if r > len(s) or l < 0 or s[r] != s[l]:
                     break
-            if len(s[r:l]) > len(largest):
-                largest = s[r:l]
+            if len(s[l:r]) > len(largest):
+                largest = s[l:r]
         return largest
 
     def attempt4(self, s):
