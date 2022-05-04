@@ -11,7 +11,7 @@ class Solution(object):
         for i in range(len(s)):
             if r >= numRows:
                 r = 0
-                for j in reversed(range(len(sr))):
+                for j in reversed(range(sr)):
                     rows[j] += s[i]
                     i += 1
             rows[r] += s[i]
