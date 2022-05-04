@@ -5,7 +5,7 @@ class Solution(object):
         :type p: "a"
         :rtype: false
         """
-        
+        if p == '.*': return True
 
         
 def test0():
