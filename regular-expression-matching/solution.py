@@ -9,7 +9,7 @@ class Solution(object):
         expand = False
         expand_char = ""
         for i in range(len(s)):
-            if s[i] not in ('.', '*'):
+            if s[i] != '*':
                 expand_char = s[i]
                 expand = False
             else:
