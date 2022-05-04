@@ -60,6 +60,9 @@ def test8():
 def test9():
     assert Solution()._String_to_Integer_atoi("-+") == 0
 
+def test10():
+    assert Solution()._String_to_Integer_atoi("-5-") == -5
+
 
 if __name__ == '__main__':
     test0()
@@ -72,3 +75,4 @@ if __name__ == '__main__':
     test7()
     test8()
     test9()
+    test10()
