@@ -27,6 +27,7 @@ class Solution(object):
             else:
                 j += 1
                 expand_char = r
+                expand = True
                 r = p[j]
         return True
 
