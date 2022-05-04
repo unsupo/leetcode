@@ -19,7 +19,7 @@ class Solution(object):
                 if r > len(s) or l < 0 or s[r] != s[l]:
                     break
             if len(s[l+1:r]) > len(largest):
-                largest = s[l:r]
+                largest = s[l+1:r]
         return largest
 
     def attempt4(self, s):
