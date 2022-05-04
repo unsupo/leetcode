@@ -132,7 +132,7 @@ with open(dir_name + '/README.md', 'w') as f:
         f.write("**Follow-up:** " + follow_up.split('**Follow-up:**')[1])
 
 inputs = examples[0].input.get_name_values()
-testName = re.sub(r'[0-9\.]+', '', title.replace(' ', '_'))
+testName = re.sub(r'[0-9\.\(\)]+', '', title.replace(' ', '_'))
 with open(dir_name + '/solution.py', 'w') as f:
     f.write(
         '''class Solution(object):

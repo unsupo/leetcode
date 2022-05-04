@@ -14,3 +14,8 @@ This makes it easy to test locally and add notes if needed.
 - Determine types and use the types instead of examples
 - Support more data like hints, similar questions
 - grab a new question not just one from a link
+
+## Bugs
+- zigzag-conversion failed because of carets 2^31
+- string-to-integer-atoi failed because of multi line explanation
+- 
