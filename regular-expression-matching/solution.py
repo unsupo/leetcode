@@ -58,5 +58,6 @@ if __name__ == '__main__':
     test3()
     [tester(*i) for i in [
         ["rasdfew", "r.*", True],
-        ["adsfdsfa", "a.*a", True]
+        ["adsfdsfa", "a.*a", True],
+        ["adsfdsf", "a.*a", False]
     ]]
