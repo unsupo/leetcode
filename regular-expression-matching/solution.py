@@ -15,7 +15,7 @@ class Solution(object):
                 groups.append(g)
                 groups.append(p[i-1:i])
                 g = ""
-            g += i
+            g += p[i]
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         # if true move to the next group
