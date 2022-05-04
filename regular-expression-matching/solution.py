@@ -6,8 +6,12 @@ class Solution(object):
         :rtype: false
         """
         if p == '.*': return True
+        expand = False
+        expand_char = ""
         for i in range(len(s)):
+            expand_char = s[i]
             
+            s[i]
 
 
         
