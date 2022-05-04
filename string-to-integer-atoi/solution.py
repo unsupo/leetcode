@@ -10,6 +10,8 @@ class Solution(object):
             if s[i] not in ('+', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
                 break
             num += s[i]
+        if not num:
+            return 0
         r = int(num)
         if r > 2 ** 31 - 1: return 2 ** 31 - 1
         if r < -2 ** 31: return -2 ** 31
