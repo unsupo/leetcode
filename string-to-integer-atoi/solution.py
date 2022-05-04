@@ -12,7 +12,10 @@ class Solution(object):
             elif start:
                 break
             if start: num+=s[i]
-        return int(num)
+        r = int(num)
+        if r > 2**31-1: return 2**31-1
+        if r < -2**31: return -2**31
+        return r
 
         
 def test0():
