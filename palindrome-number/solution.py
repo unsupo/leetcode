@@ -11,7 +11,9 @@ class Solution(object):
         if l+r < len(x):
             r+=1
         while l >= 0 and r < len(xx):
-                break
+            if xx[l] != xx[r]:
+                return False
+        return True
 
 
         
