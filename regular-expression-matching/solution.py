@@ -13,8 +13,6 @@ class Solution(object):
         r = p[0]
         for i in range(len(s)):
             if s[i] != r:
-                j += 1
-                r = p[j]
                 if r == '.':
                     r = s[i]
                 if r == '*':
