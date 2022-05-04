@@ -19,6 +19,7 @@ class Solution(object):
                 return False
         return True
 
+
 def test0():
     assert Solution()._Regular_Expression_Matching("aa", "a") == False
 
@@ -31,7 +32,14 @@ def test2():
     assert Solution()._Regular_Expression_Matching("ab", ".*") == True
 
 
+def tester(a, b, r):
+    assert Solution()._Regular_Expression_Matching(a, b) == r
+
+
 if __name__ == '__main__':
     test0()
     test1()
     test2()
+    [tester(*i) for i in [
+        ["rasdfew","r.*",True]
+    ]]
