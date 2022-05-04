@@ -32,6 +32,10 @@ def test2():
     assert Solution()._Regular_Expression_Matching("ab", ".*") == True
 
 
+def test3():
+    assert Solution()._Regular_Expression_Matching("aaabbbbb", "a*b*") == True
+
+
 def tester(a, b, r):
     assert Solution()._Regular_Expression_Matching(a, b) == r
 
@@ -41,6 +45,5 @@ if __name__ == '__main__':
     test1()
     test2()
     [tester(*i) for i in [
-        ["rasdfew", "r.*", True],
-        ["rrraaaa", "r*a*", True]
+        ["rasdfew", "r.*", True]
     ]]
