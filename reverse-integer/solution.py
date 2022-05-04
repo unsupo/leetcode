@@ -25,8 +25,13 @@ def test3():
     assert Solution()._Reverse_Integer(1534236469) == 0
 
 
+def test4():
+    assert Solution()._Reverse_Integer(1534236469) == 0
+
+
 if __name__ == '__main__':
     test0()
     test1()
     test2()
     test3()
+    test4()
