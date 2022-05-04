@@ -11,6 +11,8 @@ class Solution(object):
         if l+r < len(x):
             r+=1
         while True:
+            if l < 0 or r > len(xx):
+                break
             
 
         
