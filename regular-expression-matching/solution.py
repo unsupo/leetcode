@@ -20,6 +20,7 @@ class Solution(object):
         # order matters, find the first group if not then return false
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
+        # what about duplicates .*.*a* ?  
 
     def attempt1(self, s, p):
         if p == '.*': return True
