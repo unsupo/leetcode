@@ -4,22 +4,22 @@ class Solution(object):
         :type x: 123
         :rtype: 321
         """
-        # Have solution here and remove pass
-        pass
+        xx = str(x)
+        return "-" + xx[1::-1] if xx[0] == '-' else xx[::-1]
 
-        
+
 def test0():
     assert Solution()._Reverse_Integer(123) == 321
 
-            
+
 def test1():
     assert Solution()._Reverse_Integer(-123) == -321
 
-            
+
 def test2():
     assert Solution()._Reverse_Integer(120) == 21
 
-            
+
 if __name__ == '__main__':
     test0()
     test1()
