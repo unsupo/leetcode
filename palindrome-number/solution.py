@@ -13,6 +13,8 @@ class Solution(object):
         while l >= 0 and r < len(xx):
             if xx[l] != xx[r]:
                 return False
+            l-=1
+            r+=1
         return True
 
 
