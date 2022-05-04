@@ -6,7 +6,9 @@ class Solution(object):
         :rtype: "PAHNAPLSIIGYIR"
         """
         rows = [[] for i in range(numRows)]
+        r=0
         for i in range(len(s)):
+                
             pass # 3,1-4,2-5,3
 
         
