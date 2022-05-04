@@ -15,6 +15,8 @@ class Solution(object):
                 for j in reversed(range(1, sr)):
                     rows[j] += s[i]
                     i += 1
+                    if i >= len(s): break
+            if i >= len(s): break
             rows[r] += s[i]
             r += 1
             i += 1
