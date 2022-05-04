@@ -9,7 +9,7 @@ class Solution(object):
         r = 0  # current row to add things to
         sr = numRows - 1  # sliding rows to fill the gaps
         i = 0
-        while i < range(len(s)):
+        while i < len(s):
             if r >= numRows:
                 r = 0
                 for j in reversed(range(1, sr)):
