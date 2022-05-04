@@ -4,14 +4,12 @@ class Solution(object):
         :type s: "42"
         :rtype: 42
         """
+        s = s.strip()
         num = ""
-        start = False
         for i in range(len(s)):
-            if s[i] in ('-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
-                start = True
-            elif start:
+            if s[i] not in ('+', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
                 break
-            if start: num += s[i]
+            num += s[i]
         r = int(num)
         if r > 2 ** 31 - 1: return 2 ** 31 - 1
         if r < -2 ** 31: return -2 ** 31
