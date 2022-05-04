@@ -14,7 +14,7 @@ class Solution(object):
                 expand = False
             else:
                 expand = True
-            s[i]
+            if s[i] == 
 
 
 def test0():
