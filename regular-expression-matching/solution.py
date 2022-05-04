@@ -6,8 +6,19 @@ class Solution(object):
         :rtype: false
         """
         if p == '.*': return True
-        if not p or p == "*": return False
-        # attempt to split by *
+        if not p or p[0] == "*": return False
+        # attempt to split by * call these groups
+        groups = []
+        g = ""
+        for i in p:
+            if i == "*":
+                g += "*"
+                groups.append(g)
+                g = ""
+            g += p[i]
+        # now i have groups like asdf, a*, b*, .* ect
+        # order matters, find the first group if not then return false
+        # if true move to the next group
 
     def attempt1(self, s, p):
         if p == '.*': return True
@@ -17,7 +28,7 @@ class Solution(object):
         j = 0
         r = p[0]
         for i in range(len(s)):
-            if r != '.' and s[i] != r: # need to also look to the next character here but only if expand
+            if r != '.' and s[i] != r:  # need to also look to the next character here but only if expand
                 if r == '*':
                     r = expand_char
                     expand = True
