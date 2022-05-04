@@ -4,19 +4,20 @@ class Solution(object):
         :type x: 121
         :rtype: true
         """
+        if x < 0: return False
         xx = str(x)
 
         
 def test0():
-    assert Solution()._Palindrome_Number(121) == true
+    assert Solution()._Palindrome_Number(121) == True
 
             
 def test1():
-    assert Solution()._Palindrome_Number(-121) == false
+    assert Solution()._Palindrome_Number(-121) == False
 
             
 def test2():
-    assert Solution()._Palindrome_Number(10) == false
+    assert Solution()._Palindrome_Number(10) == False
 
             
 if __name__ == '__main__':
