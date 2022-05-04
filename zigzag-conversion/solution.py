@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: "PAHNAPLSIIGYIR"
         """
         for i in range(len(s)):
-            
+            pass # 3,1-4,2-5,3
 
         
 def test0():
