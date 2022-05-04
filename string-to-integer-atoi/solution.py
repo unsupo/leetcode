@@ -4,7 +4,6 @@ class Solution(object):
         :type s: "42"
         :rtype: 42
         """
-        if len(s) > 200: retrun
         num=""
         start=False
         for i in range(len(s)):
