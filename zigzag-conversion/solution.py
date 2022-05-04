@@ -9,7 +9,10 @@ class Solution(object):
         r = 0 # current row to add things to
         sr = 0 # sliding rows to fill the gaps
         for i in range(len(s)):
-            pass  # 3,1-4,2-5,3
+            if r >= numRows: r = 0
+            
+            r+=1
+            # 3,1-4,2-5,3
 
 
 def test0():
