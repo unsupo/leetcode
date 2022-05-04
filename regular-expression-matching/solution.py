@@ -21,6 +21,7 @@ class Solution(object):
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
         # what about duplicates .*.*a* ? might have to check ends first
+        print(g)
 
     def attempt1(self, s, p):
         if p == '.*': return True
@@ -64,23 +65,27 @@ def test2():
 def test3():
     assert Solution()._Regular_Expression_Matching("rrraaaa", "r*a*") == True
 
+def test4():
+    assert Solution()._Regular_Expression_Matching("drrraomnklbbbbc", "dr*a.*b*c") == True
+
 
 def tester(a, b, r):
     assert Solution()._Regular_Expression_Matching(a, b) == r
 
 
 if __name__ == '__main__':
-    test0()
-    test1()
-    test2()
-    test3()
-    [tester(*i) for i in [
-        ["", "r*", True],
-        ["rasdfew", "r.*", True],
-        ["adsfdsfa", "a.*a", True],
-        ["adsfdsf", "a.*a", False],
-        ["dsfdsfa", "a.*a", False],
-        ["adfsjlkadfsklj", "a.*a.*", True],
-        ["dfsjlkadfsklj", "a.*a.*", False],
-        ["adfsjlkdfsklj", "a.*a.*", False]
-    ]]
+    # test0()
+    # test1()
+    # test2()
+    # test3()
+    test4()
+    # [tester(*i) for i in [
+    #     ["", "r*", True],
+    #     ["rasdfew", "r.*", True],
+    #     ["adsfdsfa", "a.*a", True],
+    #     ["adsfdsf", "a.*a", False],
+    #     ["dsfdsfa", "a.*a", False],
+    #     ["adfsjlkadfsklj", "a.*a.*", True],
+    #     ["dfsjlkadfsklj", "a.*a.*", False],
+    #     ["adfsjlkdfsklj", "a.*a.*", False]
+    # ]]
