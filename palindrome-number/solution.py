@@ -6,6 +6,9 @@ class Solution(object):
         """
         if x < 0: return False
         xx = str(x)
+        l=len(xx)//2
+        r=len(xx)//2
+        while True:
 
         
 def test0():
