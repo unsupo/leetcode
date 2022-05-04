@@ -56,10 +56,10 @@ def tester(a, b, r):
 
 
 if __name__ == '__main__':
-    # test0()
-    # test1()
-    # test2()
+    test0()
+    test1()
+    test2()
     test3()
-    # [tester(*i) for i in [
-    #     ["rasdfew", "r.*", True]
-    # ]]
+    [tester(*i) for i in [
+        ["rasdfew", "r.*", True]
+    ]]
