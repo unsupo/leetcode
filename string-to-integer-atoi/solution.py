@@ -5,9 +5,10 @@ class Solution(object):
         :rtype: 42
         """
         s = s.strip()
+        if s[0] == '+': s = s[1:]
         num = ""
         for i in range(len(s)):
-            if s[i] not in ('+', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
+            if s[i] not in ('-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
                 break
             num += s[i]
         if not num:
