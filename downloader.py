@@ -55,7 +55,7 @@ class Example:
                                                                                              self.explanation) if self.explanation else '')
 
 
-base_url = 'https://leetcode.com/problems/longest-palindromic-substring/'
+base_url = 'https://leetcode.com/problems/zigzag-conversion/'
 # make directory for new problem
 dir_name = base_url.split('/')
 if dir_name[-1].replace('/', ''):
