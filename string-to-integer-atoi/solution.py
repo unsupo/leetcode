@@ -34,6 +34,10 @@ def test3():
     assert Solution()._String_to_Integer_atoi("words and 987") == 0
 
 
+def test4():
+    assert Solution()._String_to_Integer_atoi("+-12") == 12
+
+
 if __name__ == '__main__':
     test0()
     test1()
