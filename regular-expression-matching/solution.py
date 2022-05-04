@@ -17,6 +17,7 @@ class Solution(object):
                     r = s[i]
                 elif r == '*':
                     r = expand_char
+                    expand = True
                     j += 1
                 else:
                     r = p[j]
@@ -30,7 +31,6 @@ class Solution(object):
             else:
                 j += 1
                 expand_char = r
-                expand = True
                 if j >= len(p):
                     return False
                 r = p[j]
