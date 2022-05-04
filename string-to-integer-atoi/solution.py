@@ -7,13 +7,15 @@ class Solution(object):
         s = s.strip()
         if len(s) == 0 or (len(s) > 1 and s[0] in ('+', '-') and s[1] in ('+', '-')): return 0
         if s[0] == '+': s = s[1:]
+        neg=''
+        if s[0] == '-': n = '-'
         num = ""
         for i in range(len(s)):
-            if s[i] not in ('-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
+            if s[i] not in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0'):
                 break
             num += s[i]
         try:
-            r = int(num)
+            r = int(neg+num)
         except ValueError:
             return 0
         if r > 2 ** 31 - 1: return 2 ** 31 - 1
