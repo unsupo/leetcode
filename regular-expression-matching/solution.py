@@ -6,10 +6,11 @@ class Solution(object):
         :rtype: false
         """
         if p == '.*': return True
+        if not p: return False
         expand = False
         expand_char = ""
         j = 0
-        r = expand_char
+        r = p[0]
         for i in range(len(s)):
             if expand:
                 r = expand_char
