@@ -22,11 +22,7 @@ class Solution(object):
                     expand_char = r
             if r != '.' and s[i] != r:
                 return False
-            if expand:
-                r = expand_char
-                if r == '.':
-                    r = s[i]
-            else:
+            if not expand:
                 j += 1
                 expand_char = r
                 if j >= len(p):
