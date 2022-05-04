@@ -18,7 +18,7 @@ class Solution(object):
                 # don't go out of bounds and make sure it's still a palendrome
                 if r > len(s) or l < 0 or s[r] != s[l]:
                     break
-            if len(s[l:r]) > len(largest):
+            if len(s[l:r-1]) > len(largest):
                 largest = s[l:r]
         return largest
 
