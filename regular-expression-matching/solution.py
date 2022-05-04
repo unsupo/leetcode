@@ -8,9 +8,10 @@ class Solution(object):
         if p == '.*': return True
         expand = False
         expand_char = ""
+        r=expand_char
         for i in range(len(s)):
-            
-
+            if expand:
+                r = expand_char
 
             if i >= len(p) and not expand: return False
             if i < len(p) and p[i] != '*':
