@@ -20,6 +20,7 @@ class Solution(object):
                     j += 1
                 else:
                     r = p[j]
+                    expand_char = r
             if s[i] != r:
                 return False
             if expand:
