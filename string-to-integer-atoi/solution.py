@@ -5,6 +5,7 @@ class Solution(object):
         :rtype: 42
         """
         s = s.strip()
+        if s[0] == '+' and s[1] == '-': return 0
         if s[0] == '+': s = s[1:]
         num = ""
         for i in range(len(s)):
