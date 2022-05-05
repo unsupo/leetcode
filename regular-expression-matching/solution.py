@@ -64,7 +64,7 @@ class Solution(object):
                     else:
                         str_index -= 1
                     break
-                elif group[group_index] != '.' and group[group_index] != s[str_index]:
+                elif str_index >= len(s) or (group[group_index] != '.' and group[group_index] != s[str_index]):
                     return False
                 str_index += 1
             if not found:
