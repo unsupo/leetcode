@@ -25,11 +25,17 @@ class Solution(object):
         if g: groups.append(g)
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
-        group_index = 0
+        groups_index = 0
         for str_index in range(len(s)):
-            if '*' in groups[group_index]:
-                pass
-            
+            expand = False
+            expand_char = ""
+            group = groups[groups_index]
+            if '*' == group[1]: # if this fails then above while loop failed
+                expand = True
+                expand_char = group[0]
+            for group_index in range(len(group)):
+
+
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
