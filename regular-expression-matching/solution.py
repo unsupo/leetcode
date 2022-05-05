@@ -36,7 +36,7 @@ class Solution(object):
             for group_index in range(len(group)):
                 if expand:
                     if expand_char == '.' or s[str_index] == expand_char:
-                        pass
+                        continue
                     else:
                         break  # if it doesn't match then move on from this group
                 elif group[group_index] != s[str_index]:
