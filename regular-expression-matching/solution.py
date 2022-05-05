@@ -129,6 +129,10 @@ def test5():
     assert Solution()._Regular_Expression_Matching("aaa", "aaaa") == False
 
 
+def test6():
+    assert Solution()._Regular_Expression_Matching("aaa", "a*a") == False
+
+
 def tester(a, b, r):
     sol = Solution()._Regular_Expression_Matching(a, b)
     if sol != r:
