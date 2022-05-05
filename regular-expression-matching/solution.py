@@ -33,15 +33,16 @@ class Solution(object):
             if len(group) == 2 and '*' == group[1]:  # if this fails then above while loop failed
                 expand = True
                 expand_char = group[0]
+            found = False
             for group_index in range(len(group)):
                 if expand:
                     if expand_char == '.' or s[str_index] == expand_char:
-                        continue
-                    else:
-                        break  # if it doesn't match then move on from this group
+                        found = True # if it matches then stay on this group
+                    break
                 elif group[group_index] != s[str_index]:
                     return False
-            groups_index += 1
+            if not found:
+                groups_index += 1
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
