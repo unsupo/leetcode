@@ -30,7 +30,7 @@ class Solution(object):
             expand = False
             expand_char = ""
             group = groups[groups_index]
-            if '*' == group[1]:  # if this fails then above while loop failed
+            if len(group) == 2 and '*' == group[1]:  # if this fails then above while loop failed
                 expand = True
                 expand_char = group[0]
             for group_index in range(len(group)):
