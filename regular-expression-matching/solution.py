@@ -51,7 +51,7 @@ class Solution(object):
                             # if found_match is True then the next group was found so move on from that and dot match
                             if found_match:
                                 str_index = tmp_str_index
-                                groups_index += 1 # just one here because it'll add another below
+                                groups_index += 2
                         found = True  # if it matches then stay on this group
                     else:
                         str_index -= 1
@@ -61,7 +61,7 @@ class Solution(object):
             if not found:
                 groups_index += 1
             str_index += 1
-        if str_index == len(s):
+        if str_index > len(s) and groups_index == len(groups):
             return True
         return False
 
