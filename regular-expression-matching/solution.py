@@ -125,6 +125,10 @@ def test4():
     assert Solution()._Regular_Expression_Matching("drrraomnklbbbbc", "dr*a.*.*b*b*b*c") == True
 
 
+def test5():
+    assert Solution()._Regular_Expression_Matching("aaa", "aaaa") == True
+
+
 def tester(a, b, r):
     sol = Solution()._Regular_Expression_Matching(a, b)
     if sol != r:
@@ -137,6 +141,7 @@ if __name__ == '__main__':
     test2()
     test3()
     test4()
+    test5()
     [tester(*i) for i in [
         ["", "r*", True],
         ["rasdfew", "r.*", True],
