@@ -28,7 +28,8 @@ class Solution(object):
         group_index = 0
         for str_index in range(len(s)):
             if '*' in groups[group_index]:
-                
+                pass
+            
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
