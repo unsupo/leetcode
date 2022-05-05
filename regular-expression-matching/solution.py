@@ -22,6 +22,7 @@ class Solution(object):
             else:
                 g += p[i]
             i += 1
+        if g: groups.append(g)
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         # if true move to the next group
