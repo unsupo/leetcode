@@ -34,11 +34,12 @@ class Solution(object):
             if len(group) == 2 and '*' == group[1]:  # if this fails then above while loop failed
                 expand = True
                 expand_char = group[0]
-            found = True
+            found = False
             for group_index in range(len(group)):
                 if expand:
-                    if not(expand_char == '.' or s[str_index] == expand_char):
-                        found = False # if it doesn't match then move on from this group
+                    if expand_char == '.' or s[str_index] == expand_char:
+                        found = True  # if it matches then stay on this group
+                    else:
                         str_index -= 1
                     break
                 elif group[group_index] != s[str_index]:
