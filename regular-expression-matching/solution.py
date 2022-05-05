@@ -39,9 +39,12 @@ class Solution(object):
                 if expand:
                     if expand_char == '.' or s[str_index] == expand_char:
                         # if it's a dot then check the next non group to see if it matches
-                        if expand_char == '.':
-                            nxt_group_index = 0
-                            
+                        if expand_char == '.' and groups_index + 1 < len(groups):
+                            # i can assume next group is not a .* or else above while loop failed
+                            for nxt_group_char in groups[groups_index+1]:
+                                if nxt_group_char != s[str_index]:
+                                    break
+                            # if i get here then i know
                         found = True  # if it matches then stay on this group
                     else:
                         str_index -= 1
