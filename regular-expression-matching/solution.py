@@ -12,10 +12,10 @@ class Solution(object):
         g = ""  # i'll assume i can't split here since i can't use re
         i = 0
         while i < len(p):
-            if i+1 < len(p) and p[i+1] == "*":
+            if i + 1 < len(p) and p[i + 1] == "*":
                 if g:
                     groups.append(g)
-                if p[i:i + 2] != groups[-1]: #  duplicates .*.* == .*
+                if p[i:i + 2] != groups[-1]:  # duplicates .*.* == .*
                     groups.append(p[i:i + 2])
                 g = ""
                 i += 1
@@ -30,13 +30,17 @@ class Solution(object):
             expand = False
             expand_char = ""
             group = groups[groups_index]
-            if '*' == group[1]: # if this fails then above while loop failed
+            if '*' == group[1]:  # if this fails then above while loop failed
                 expand = True
                 expand_char = group[0]
             for group_index in range(len(group)):
-                
-
-
+                if expand:
+                    if expand_char == '.' or s[str_index] == expand_char:
+                        str_index += 1
+                    else:
+                        break # if it doesn't match then move on from this group
+                else:
+                    
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
