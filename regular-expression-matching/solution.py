@@ -9,12 +9,14 @@ class Solution(object):
         if not p or p[0] == "*": return False
         # attempt to split by * call these groups
         groups = []
+        mandatory_groups = [] # non * groups
         g = ""  # i'll assume i can't split here since i can't use re
         i = 0
         while i < len(p):
             if i + 1 < len(p) and p[i + 1] == "*":
                 if g:
                     groups.append(g)
+                    mandatory_groups.append(g)
                 if not groups or (groups[-1] != '.*' and p[i:i + 2] != groups[-1]):  # duplicates .*.*a* == .*
                     groups.append(p[i:i + 2])
                 g = ""
@@ -63,7 +65,7 @@ class Solution(object):
             if not found:
                 groups_index += 1
             str_index += 1
-        if str_index >= len(s) and groups_index >= len(groups):
+        if str_index >= len(s) and groups_index >= len(mandatory_groups):
             return True
         return False
 
