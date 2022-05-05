@@ -58,6 +58,7 @@ class Solution(object):
                             # if found_match is True then the next group was found so move on from that and dot match
                             if found_match:
                                 str_index = tmp_str_index
+                                mandatory_groups_cnt += 1
                                 groups_index += 2
                         found = True  # if it matches then stay on this group
                     else:
