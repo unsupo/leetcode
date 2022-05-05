@@ -34,6 +34,7 @@ class Solution(object):
                 expand = True
                 expand_char = group[0]
             for group_index in range(len(group)):
+                
 
 
 
