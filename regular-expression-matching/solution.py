@@ -63,7 +63,7 @@ class Solution(object):
             if not found:
                 groups_index += 1
             str_index += 1
-        if str_index > len(s) and groups_index == len(groups):
+        if str_index > len(s):
             return True
         return False
 
