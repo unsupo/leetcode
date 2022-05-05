@@ -11,7 +11,7 @@ class Solution(object):
         groups = []
         g = ""  # i'll assume i can't split here since i can't use re
         i = 0
-        while i < len(p):
+        while i+1 < len(p):
             if p[i+1] == "*":
                 if g:
                     groups.append(g)
