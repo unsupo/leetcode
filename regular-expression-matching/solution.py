@@ -71,6 +71,8 @@ class Solution(object):
                 groups_index += 1
                 if not expand:
                     mandatory_groups_cnt += 1
+                if groups_index >= len(groups):
+                    break
             str_index += 1
         if str_index > len(s) and mandatory_groups_cnt >= len(mandatory_groups):
             return True
