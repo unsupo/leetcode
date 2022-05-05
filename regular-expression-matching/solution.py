@@ -41,7 +41,7 @@ class Solution(object):
                         break  # if it doesn't match then move on from this group
                 elif group[group_index] != s[str_index]:
                     return False
-            group_index += 1
+            groups_index += 1
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
