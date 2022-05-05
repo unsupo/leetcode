@@ -30,6 +30,8 @@ class Solution(object):
         while str_index < len(s):
             expand = False
             expand_char = ""
+            if groups_index >= len(groups):
+                return False
             group = groups[groups_index]
             if len(group) == 2 and '*' == group[1]:  # if this fails then above while loop failed
                 expand = True
