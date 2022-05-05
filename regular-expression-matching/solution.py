@@ -66,6 +66,7 @@ class Solution(object):
                     break
                 elif group[group_index] != '.' and group[group_index] != s[str_index]:
                     return False
+                str_index += 1
             if not found:
                 groups_index += 1
                 if not expand:
