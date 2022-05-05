@@ -10,15 +10,15 @@ class Solution(object):
         # attempt to split by * call these groups
         groups = []
         g = ""  # i'll assume i can't split here since i can't use re
-        i = 0
+        i = -1
         while i < len(p):
             if p[i+1] == "*":
                 groups.append(g)
                 groups.append(p[i:i + 2])
                 g = ""
                 i += 1
-            g += p[i]
             i += 1
+            g += p[i]
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         # if true move to the next group
