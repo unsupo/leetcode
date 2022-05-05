@@ -130,7 +130,7 @@ def test5():
 
 
 def test6():
-    assert Solution()._Regular_Expression_Matching("aaa", "a*a") == False
+    assert Solution()._Regular_Expression_Matching("aaa", "a*a") == True
 
 
 def tester(a, b, r):
@@ -146,6 +146,7 @@ if __name__ == '__main__':
     test3()
     test4()
     test5()
+    test6()
     [tester(*i) for i in [
         ["", "r*", True],
         ["rasdfew", "r.*", True],
