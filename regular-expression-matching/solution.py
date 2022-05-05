@@ -26,7 +26,8 @@ class Solution(object):
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         groups_index = 0
-        for str_index in range(len(s)):
+        str_index = 0
+        while str_index < len(s):
             expand = False
             expand_char = ""
             group = groups[groups_index]
@@ -45,6 +46,7 @@ class Solution(object):
                     return False
             if not found:
                 groups_index += 1
+            str_index+=1
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
