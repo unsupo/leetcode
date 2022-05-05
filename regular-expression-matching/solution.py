@@ -15,7 +15,7 @@ class Solution(object):
             if i + 1 < len(p) and p[i + 1] == "*":
                 if g:
                     groups.append(g)
-                if groups and groups[-1] != '.*' and p[i:i + 2] != groups[-1]:  # duplicates .*.*a* == .*
+                if not groups or (groups[-1] != '.*' and p[i:i + 2] != groups[-1]):  # duplicates .*.*a* == .*
                     groups.append(p[i:i + 2])
                 g = ""
                 i += 1
