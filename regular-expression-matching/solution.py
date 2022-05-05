@@ -36,13 +36,11 @@ class Solution(object):
             for group_index in range(len(group)):
                 if expand:
                     if expand_char == '.' or s[str_index] == expand_char:
-                        str_index += 1
+                        pass
                     else:
                         break # if it doesn't match then move on from this group
-                else:
-                    if group[group_index] != s[str_index]:
-                        return False
-                    else:
+                elif group[group_index] != s[str_index]:
+                    return False
 
 
         # if true move to the next group
