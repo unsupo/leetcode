@@ -121,15 +121,15 @@ def tester(a, b, r):
 
 
 if __name__ == '__main__':
-    test0()
-    test1()
-    test2()
-    test3()
-    test4()
+    # test0()
+    # test1()
+    # test2()
+    # test3()
+    # test4()
     [tester(*i) for i in [
         # ["", "r*", True],
         # ["rasdfew", "r.*", True],
-        ["adsfdsfa", "a.*a", True],
+        # ["adsfdsfa", "a.*a", True],
         ["adsfdsf", "a.*a", False],
         ["dsfdsfa", "a.*a", False],
         ["adfsjlkadfsklj", "a.*a.*", True],
