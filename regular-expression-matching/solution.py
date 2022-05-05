@@ -13,8 +13,10 @@ class Solution(object):
         i = 0
         while i < len(p):
             if p[i+1] == "*":
-                groups.append(g)
-                groups.append(p[i:i + 2])
+                if g:
+                    groups.append(g)
+                if p[i:i + 2] != p[-1]:
+                    groups.append(p[i:i + 2])
                 g = ""
                 i += 1
             else:
@@ -71,7 +73,7 @@ def test3():
 
 
 def test4():
-    assert Solution()._Regular_Expression_Matching("drrraomnklbbbbc", "dr*a.*b*c") == True
+    assert Solution()._Regular_Expression_Matching("drrraomnklbbbbc", "dr*a.*.*b*b*b*c") == True
 
 
 def tester(a, b, r):
