@@ -38,6 +38,7 @@ class Solution(object):
             for group_index in range(len(group)):
                 if expand:
                     if expand_char == '.' or s[str_index] == expand_char:
+                        # if it's a dot then check the next non group to see if it matches
                         found = True  # if it matches then stay on this group
                     else:
                         str_index -= 1
