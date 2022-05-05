@@ -72,7 +72,7 @@ class Solution(object):
                 if not expand:
                     mandatory_groups_cnt += 1
             str_index += 1
-        if str_index >= len(s) and mandatory_groups_cnt >= len(mandatory_groups):
+        if str_index > len(s) and mandatory_groups_cnt >= len(mandatory_groups):
             return True
         return False
 
