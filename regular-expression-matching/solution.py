@@ -132,9 +132,9 @@ if __name__ == '__main__':
     # test3()
     # test4()
     [tester(*i) for i in [
-        ["", "r*", True],
-        ["rasdfew", "r.*", True],
-        ["adsfdsfa", "a.*a", True],
+        # ["", "r*", True],
+        # ["rasdfew", "r.*", True],
+        # ["adsfdsfa", "a.*a", True],
         ["adsfdsf", "a.*a", False],
         ["dsfdsfa", "a.*a", False],
         ["adfsjlkadfsklj", "a.*a.*", True],
