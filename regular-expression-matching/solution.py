@@ -48,7 +48,10 @@ class Solution(object):
                                     found_match = False
                                     break
                                 tmp_str_index += 1
-                            # if found_match is True 
+                            # if found_match is True then the next group was found so move on from that and dot match
+                            if found_match:
+                                str_index = tmp_str_index
+                                groups_index += 1 # just one here because it'll add another below
                         found = True  # if it matches then stay on this group
                     else:
                         str_index -= 1
@@ -58,11 +61,10 @@ class Solution(object):
             if not found:
                 groups_index += 1
             str_index += 1
+        if str_index == len(s):
+            return True
+        return False
 
-        # if true move to the next group
-        # how to move on from a .* group? need to check the next group
-
-        print(g)
 
     def attempt1(self, s, p):
         if p == '.*': return True
