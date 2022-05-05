@@ -15,7 +15,7 @@ class Solution(object):
             if i+1 < len(p) and p[i+1] == "*":
                 if g:
                     groups.append(g)
-                if p[i:i + 2] != groups[-1]:
+                if p[i:i + 2] != groups[-1]: #  duplicates .*.* == .*
                     groups.append(p[i:i + 2])
                 g = ""
                 i += 1
@@ -25,9 +25,11 @@ class Solution(object):
         if g: groups.append(g)
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
+        group_index = 0
+        
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
-        # what about duplicates .*.*a* ? might have to check ends first
+
         print(g)
 
     def attempt1(self, s, p):
