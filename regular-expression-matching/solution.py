@@ -35,12 +35,13 @@ class Solution(object):
                 expand_char = group[0]
             for group_index in range(len(group)):
                 if expand:
-                    if expand_char == '.' or s[str_index] == expand_char:
-                        str_index += 1
-                    else:
+                    if not(expand_char == '.' or s[str_index] == expand_char):
                         break # if it doesn't match then move on from this group
                 else:
-                    
+                    if group[group_index] != s[str_index]:
+                        return False
+                    else:
+
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
