@@ -9,7 +9,7 @@ class Solution(object):
         if not p or p[0] == "*": return False
         # attempt to split by * call these groups
         groups = []
-        mandatory_groups = [] # non * groups
+        mandatory_groups = []  # non * groups
         g = ""  # i'll assume i can't split here since i can't use re
         i = 0
         while i < len(p):
@@ -28,6 +28,7 @@ class Solution(object):
         # now i have groups like asdf, a*, b*, .* ect
         # order matters, find the first group if not then return false
         groups_index = 0
+        mandatory_groups_cnt = 0
         str_index = 0
         while str_index < len(s):
             expand = False
@@ -64,8 +65,10 @@ class Solution(object):
                     return False
             if not found:
                 groups_index += 1
+                if not expand:
+                    mandatory_groups_cnt += 1
             str_index += 1
-        if str_index >= len(s) and groups_index >= len(mandatory_groups):
+        if str_index >= len(s) and mandatory_groups_cnt >= len(mandatory_groups):
             return True
         return False
 
