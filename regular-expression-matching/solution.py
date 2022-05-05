@@ -116,7 +116,7 @@ def test4():
 
 def tester(a, b, r):
     sol = Solution()._Regular_Expression_Matching(a, b)
-    if sol == r:
+    if sol != r:
         raise Exception("Inputs: {} and {}, gave wrong result {} instead of {}".format(a, b, sol, r))
 
 
