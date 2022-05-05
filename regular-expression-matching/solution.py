@@ -118,10 +118,10 @@ def tester(a, b, r):
 
 
 if __name__ == '__main__':
-    # test0()
-    # test1()
-    # test2()
-    # test3()
+    test0()
+    test1()
+    test2()
+    test3()
     test4()
     # [tester(*i) for i in [
     #     ["", "r*", True],
