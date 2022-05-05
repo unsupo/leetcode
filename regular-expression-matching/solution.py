@@ -67,7 +67,6 @@ class Solution(object):
             return True
         return False
 
-
     def attempt1(self, s, p):
         if p == '.*': return True
         if not p: return False
@@ -116,7 +115,9 @@ def test4():
 
 
 def tester(a, b, r):
-    assert Solution()._Regular_Expression_Matching(a, b) == r
+    sol = Solution()._Regular_Expression_Matching(a, b)
+    if sol == r:
+        raise Exception("Inputs: {} and {}, gave wrong result {} instead of {}".format(a, b, sol, r))
 
 
 if __name__ == '__main__':
@@ -133,5 +134,6 @@ if __name__ == '__main__':
         ["dsfdsfa", "a.*a", False],
         ["adfsjlkadfsklj", "a.*a.*", True],
         ["dfsjlkadfsklj", "a.*a.*", False],
-        ["adfsjlkdfsklj", "a.*a.*", False]
+        ["adfsjlkdfsklj", "a.*a.*", False],
+        ["mississippi", "mis*is*ip*.", True]
     ]]
