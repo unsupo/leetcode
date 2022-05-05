@@ -42,10 +42,12 @@ class Solution(object):
                         if expand_char == '.' and groups_index + 1 < len(groups):
                             # i can assume next group is not a .* or else above while loop failed
                             found_match = True
-                            for nxt_group_char in groups[groups_index+1]:
-                                if nxt_group_char != s[str_index]:
+                            tmp_str_index = str_index
+                            for nxt_group_char in groups[groups_index + 1]:
+                                if nxt_group_char != s[tmp_str_index]:
                                     found_match = False
                                     break
+                                tmp_str_index += 1
                             # if found_match is True 
                         found = True  # if it matches then stay on this group
                     else:
@@ -55,7 +57,7 @@ class Solution(object):
                     return False
             if not found:
                 groups_index += 1
-            str_index+=1
+            str_index += 1
 
         # if true move to the next group
         # how to move on from a .* group? need to check the next group
