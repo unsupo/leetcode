@@ -1,0 +1,19 @@
+curl 'https://leetcode.com/graphql/' \
+  -H 'authority: leetcode.com' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'authorization;' \
+  -H 'content-type: application/json' \
+  -H 'cookie: csrftoken=GsUTDalYpz0uFoKEttjfUPSMmwry0mLgpyfZFePBXAOrZxFISAhqDqF8Eg1kO1lB; LEETCODE_SESSION=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfYXV0aF91c2VyX2lkIjoiMjAyODI5MCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiMGI5MWZjNTIzN2VhMThiODFkNjI1MjNkMTg0NjBlODFjZDc1ZjlhYSIsImlkIjoyMDI4MjkwLCJlbWFpbCI6InVuc3Vwb0BnbWFpbC5jb20iLCJ1c2VybmFtZSI6InVuc3VwbyIsInVzZXJfc2x1ZyI6InVuc3VwbyIsImF2YXRhciI6Imh0dHBzOi8vczMtdXMtd2VzdC0xLmFtYXpvbmF3cy5jb20vczMtbGMtdXBsb2FkL2Fzc2V0cy9kZWZhdWx0X2F2YXRhci5qcGciLCJyZWZyZXNoZWRfYXQiOjE2NjU2MTEzNTQsImlwIjoiMTMuMTEwLjU0LjM4IiwiaWRlbnRpdHkiOiJhMDVkZjAwN2VmY2VmZTI4OTQxNGNkNmQwZTEwZTcxNyIsInNlc3Npb25faWQiOjI4NjA4Mzg4LCJfc2Vzc2lvbl9leHBpcnkiOjEyMDk2MDB9.YvVPSmFbYKhbvUSKEGeGV1rhtBwGpWcCJjF0LzHgPrc; NEW_PROBLEMLIST_PAGE=1; __stripe_mid=2212bd6b-d0fa-4758-9c91-a1da169e7ff1b09819; __stripe_sid=8dc20e9d-bd37-456a-a036-73beeb7658bc3388cd' \
+  -H 'origin: https://leetcode.com' \
+  -H 'referer: https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiQVNDRU5ESU5HIiwib3JkZXJCeSI6IkZST05URU5EX0lEIn1d&page=1&search=longest-substring-without-repeating-characters' \
+  -H 'sec-ch-ua: "Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36' \
+  -H 'x-csrftoken: GsUTDalYpz0uFoKEttjfUPSMmwry0mLgpyfZFePBXAOrZxFISAhqDqF8Eg1kO1lB' \
+  --data-raw '{"query":"\n    query problemsetQuestionList($categorySlug: String, $limit: Int, $skip: Int, $filters: QuestionListFilterInput) {\n  problemsetQuestionList: questionList(\n    categorySlug: $categorySlug\n    limit: $limit\n    skip: $skip\n    filters: $filters\n  ) {\n    total: totalNum\n    questions: data {\n      acRate\n      difficulty\n      freqBar\n      frontendQuestionId: questionFrontendId\n      isFavor\n      paidOnly: isPaidOnly\n      status\n      title\n      titleSlug\n      topicTags {\n        name\n        id\n        slug\n      }\n      hasSolution\n      hasVideoSolution\n    }\n  }\n}\n    ","variables":{"categorySlug":"","skip":0,"limit":50,"filters":{"orderBy":"FRONTEND_ID","sortOrder":"ASCENDING","searchKeywords":"longest-substring-without-repeating-characters"}}}' \
+  --compressed
