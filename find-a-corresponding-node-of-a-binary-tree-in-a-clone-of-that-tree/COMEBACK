@@ -1,0 +1,84 @@
+for distinct node values we can compare the values
+but for non-unique values we need to compare the nodes
+
+in order traversal
+
+inorder(original,cloned)
+
+if(orig != None) # traverse L root R
+    inorder(orig.left, cloned.left);
+    if(orig==target) res = cloned;
+    inorder(orig.right, cloned.right)
+
+Time Space
+time: O(N) Nodes in tree
+space: O(H) height of tree
+
+Morris traversal is O(1) but can't be performed because we can't change source
+
+# if not repeated values
+# DFS depth first search
+def dfs(node):
+    if not node:
+        return None
+    elif node.val == target.val:
+        return node
+    return dfs(node.left) or dfs(node.right)
+return dfs(cloned)
+
+# if repeated values
+# DFS depth first search
+def dfs(node1, node2):
+    if not node1:
+        return None
+    elif node1 == target:
+        return node2
+    return dfs(node1.left, node2.left) or dfs(node1.right, node2.left)
+return dfs(original, cloned)
+
+
+def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
+
+        self.ans = None
+        self.dfs(original, cloned, target)
+        return self.ans
+
+    def dfs(self, t1, t2, target):
+      if not t1 or not t2:
+        return
+
+      if t1 is target:
+        self.ans = t2
+
+      self.dfs(t1.right, t2.right, target)
+      self.dfs(t1.left, t2.left, target)
+
+	def iterative(self, original, cloned, target):
+        t1 = [original]
+        t2 = [cloned]
+        while t1 and t2:
+          node1 = t1.pop()
+          node2 = t2.pop()
+
+          if node1 is target:
+            return node2
+
+          if node1 is not None:
+            t1.append(node1.left)
+            t1.append(node1.right)
+          if node2 is not None:
+            t2.append(node2.left)
+            t2.append(node2.right)
+
+# iterators
+class Solution:
+    def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
+        def it(node):
+            if node:
+                yield node
+                yield from it(node.left)
+                yield from it(node.right)
+
+        for n1, n2 in zip(it(original), it(cloned)):
+            if n1 == target:
+                return n2
