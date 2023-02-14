@@ -1,10 +1,6 @@
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None): # TODO this was commented out
-        self.val = val
-        self.left = left if type(left) == TreeNode or not left else TreeNode(left)
-        self.right = right if type(right) == TreeNode or not right else TreeNode(right)
 from typing import Optional # TODO this wasn't imported
+
+from util import TreeNode
 
 
 class Solution:

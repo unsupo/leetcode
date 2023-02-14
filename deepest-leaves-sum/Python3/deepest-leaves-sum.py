@@ -1,12 +1,5 @@
-from typing import Optional, List
-
-
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from typing import Optional
+from util import TreeNode, createTree
 
 
 class Solution:
@@ -30,28 +23,6 @@ class Solution:
     #             node_depth[depth]=[]
     #         node_depth[depth].append(node.val)
     #     return sum(node_depth[max_depth])
-
-
-# TODO this wasn't included
-# this assumes param has at least one value
-def createTree(param: List[int]):
-    # root, left, right,
-    # left(1 if 1 is not None else 2), right(1 if 1 is not None else 2) , ect
-    root = TreeNode(param[0])
-    depth = [[root]]  # r, [l,r], [ll,lr,rl,rr], [lll,llr,lrl,lrr,rll,rlr,rrl,rrr]
-    k = 0
-    x = 1
-    while x < len(param):
-        v = []
-        for i in range(len(depth[k])):
-            if not depth[k][i]: continue
-            depth[k][i].left = TreeNode(param[x]) if param[x] else None
-            depth[k][i].right = TreeNode(param[x + 1]) if param[x + 1] else None
-            v.extend([depth[k][i].left, depth[k][i].right])
-            x += 2
-        depth.append(v)
-        k += 1
-    return root
 
 
 input = [[1, 2, 3, 4, 5, None, 6, 7, None, None, None, None, 8],
