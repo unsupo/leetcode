@@ -153,7 +153,7 @@ function generateTestCode(language: string, metadata: Metadata, inputs: string[]
       `    r = Solution().${METHOD}(input[i])\n` + // TODO class names aren't always Solution see subrectangle-queries
       '    if str(r) != str(output[i]):\n' + // str wrapper is for checking type so we don't return a double when it wants an int
       '        raise Exception(\'Failed: \'+str(input[i])+\' ---- Got: \'+str(r)+\' !== \'+str(output[i]))\n' +
-      '    print(\'Passed input: \'+str(input[i]))').replace(INPUT,inputs.map(m=>m.replace('null','None')).join(',')).replace(OUTPUT,outputs.map(m=>m.replace('null','None')).join(',')).replace(METHOD,metadata.name);
+      '    print(\'Passed input: \'+str(input[i]))').replace(INPUT,inputs.join(',').replace('null','None')).replace(OUTPUT,outputs.join(',').replace('null','None')).replace(METHOD,metadata.name);
     // TODO find a regex for non quoted null and boolean and replace those
     case "C": return "c"
     case "C#": return "cs"

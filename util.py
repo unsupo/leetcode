@@ -9,6 +9,9 @@ class TreeNode:
         self.left = left if type(left) == TreeNode or not left else TreeNode(left)
         self.right = right if type(right) == TreeNode or not right else TreeNode(right)
 
+    def __str__(self) -> str:
+        return str(createList(self))
+
 
 def createTree(param: List[int], target_value: int = None):
     # root, left, right,
